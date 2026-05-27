@@ -54,8 +54,8 @@ const data = {
     benefitsTitle: "הצטרפות ל־SLB היא כניסה לקהילה עם חיבור חי לשומרון.",
     benefitsText:
       "המצטרפים מקבלים עדכונים, גישה, חוויות ותחושת שייכות לקהילה בינלאומית שבונה את השומרון לאורך זמן.",
-    taxShortText:
-      "ההצטרפות דרך JGive מאפשרת קבלה לפי סעיף 46 בישראל. לתורמים בארה״ב ניתן יהיה להצטרף גם דרך מסלול 501(c)(3) לקבלת U.S. tax-deductible receipt, בכפוף לזכאות ולכללי המס.",
+taxShortText:
+  "ההצטרפות מתבצעת דרך JGive וקרן שומרון, עם אפשרות לקבלת קבלה לפי סעיף 46 בישראל. לתורמים בארה״ב ניתן יהיה להצטרף גם דרך מסלול 501(c)(3) לקבלת U.S. tax-deductible receipt, בכפוף לזכאות ולכללי המס.",
     finalKicker: "הצעד הבא",
     finalTitle: "רוצה להצטרף או לשמוע עוד?",
     finalText:
@@ -203,12 +203,19 @@ function Button({ children, href, variant = "primary", type = "button", disabled
   };
 
   if (href) {
-    return (
-      <a className={`${base} ${styles[variant]}`} href={href} target="_blank" rel="noreferrer">
-        {children}
-      </a>
-    );
-  }
+  const isInternalLink = href.startsWith("#");
+
+  return (
+    <a
+      className={`${base} ${styles[variant]}`}
+      href={href}
+      target={isInternalLink ? undefined : "_blank"}
+      rel={isInternalLink ? undefined : "noreferrer"}
+    >
+      {children}
+    </a>
+  );
+}
 
   return (
     <button className={`${base} ${styles[variant]}`} type={type} disabled={disabled} onClick={onClick}>
@@ -339,7 +346,7 @@ export default function LandingPage() {
                 {t.primaryCta}
                 <DirectionArrow className="mx-2 h-5 w-5" />
               </Button>
-              <Button variant="outlineLight">{t.secondaryCta}</Button>
+              <Button variant="outlineLight" href="#contact-form">{t.secondaryCta}</Button>
             </div>
           </motion.div>
 
@@ -409,9 +416,10 @@ export default function LandingPage() {
               </Card>
             ))}
           </div>
-          <div className="mx-auto mt-8 max-w-4xl rounded-2xl bg-[#F4EFE6] p-5 text-center text-sm font-medium leading-7 text-[#344D32] ring-1 ring-[#E9D9A8]">
-            {t.taxShortText}
-          </div>
+      <div className="mx-auto mt-8 max-w-4xl rounded-2xl bg-[#F4EFE6] p-5 text-center text-sm font-medium leading-7 text-[#344D32] ring-1 ring-[#E9D9A8]">
+  {t.taxShortText}
+</div>
+           
         </div>
       </section>
 
@@ -434,7 +442,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#0B1320] px-6 py-18 text-white md:px-10 md:py-20">
+      <section id="contact-form" className="relative overflow-hidden bg-[#0B1320] px-6 py-18 text-white md:px-10 md:py-20">
         <img
   src={HILLS_IMAGE}
   alt=""

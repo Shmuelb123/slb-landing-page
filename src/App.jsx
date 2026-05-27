@@ -20,8 +20,8 @@ const ISRAEL_PAYMENT_URL_HE = "https://www.jgive.com/new/he/ils/charity-organiza
 const ISRAEL_PAYMENT_URL_EN = "https://www.jgive.com/new/en/ils/charity-organizations/4717";
 const USA_PAYMENT_URL = "PASTE_US_501C3_TAX_DEDUCTIBLE_PAYMENT_LINK_HERE";
 
-const HERO_IMAGE = "/images/shomron-hero.jpeg";
-const HILLS_IMAGE = "/images/shomron-hills.jpeg";
+const HERO_IMAGE = "/Images/shomron-hero.jpeg";
+const HILLS_IMAGE = "/Images/shomron-hills.jpeg";
 
 const data = {
   he: {
@@ -301,7 +301,7 @@ export default function LandingPage() {
     <main dir={t.dir} className={`min-h-screen bg-[#FBF8F1] text-[#0B1320] ${textAlign}`}>
       <section className="relative overflow-hidden bg-[#0B1320] text-white">
         <img
-  src="/images/shomron-hero.jpeg"
+  src={HERO_IMAGE}
   alt=""
   className="absolute inset-0 h-full w-full object-cover opacity-70"
 />

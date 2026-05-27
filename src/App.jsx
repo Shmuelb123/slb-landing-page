@@ -317,10 +317,19 @@ export default function LandingPage() {
 
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 py-24 md:grid-cols-2 md:px-10 lg:py-32">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="space-y-8">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm text-[#E9D9A8] backdrop-blur">
-              <HeartHandshake className="h-4 w-4" />
-              {t.badge}
-            </div>
+            <div className="flex items-center gap-4">
+  <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-[#FBF8F1] p-2 shadow-xl ring-1 ring-[#E9D9A8] md:h-28 md:w-28">
+    <img
+      src="/images/slb-logo.png"
+      alt="Shomron Legacy Builders"
+      className="h-full w-full rounded-full object-contain"
+    />
+  </div>
+  <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm text-[#E9D9A8] backdrop-blur">
+    <HeartHandshake className="h-4 w-4" />
+    {t.badge}
+  </div>
+</div>
             <div className="space-y-5">
               <h1 className="max-w-3xl text-4xl font-bold tracking-tight md:text-6xl">{t.heroTitle}</h1>
               <p className="max-w-2xl text-lg leading-8 text-slate-200 md:text-xl">{t.heroText}</p>

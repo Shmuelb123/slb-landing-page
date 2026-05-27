@@ -14,7 +14,8 @@ import {
   FileCheck2,
 } from "lucide-react";
 
-const GOOGLE_SHEETS_WEB_APP_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+const GOOGLE_FORM_ACTION_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSdRHet2DIixzCF_7nstTwvkdoc1z6xEQ7PZy4VWk0RrpSJlNg/formResponse";
 const ISRAEL_PAYMENT_URL_HE = "https://www.jgive.com/new/he/ils/charity-organizations/4717";
 const ISRAEL_PAYMENT_URL_EN = "https://www.jgive.com/new/en/ils/charity-organizations/4717";
 const USA_PAYMENT_URL = "PASTE_US_501C3_TAX_DEDUCTIBLE_PAYMENT_LINK_HERE";
@@ -261,31 +262,40 @@ export default function LandingPage() {
     setFormData((current) => ({ ...current, [field]: value }));
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    setFormStatus("submitting");
+ const handleSubmit = async (event) => {
+  event.preventDefault();
+  setFormStatus("submitting");
 
-    try {
-      const payload = {
-        ...formData,
-        language,
-        source: "SLB Landing Page",
-        submittedAt: new Date().toISOString(),
-      };
+  try {
+    const formPayload = new FormData();
 
-      await fetch(GOOGLE_SHEETS_WEB_APP_URL, {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
+    formPayload.append("entry.865479936", formData.name);
+    formPayload.append("entry.1319197575", formData.phone);
+    formPayload.append("entry.1845781737", formData.email);
+    formPayload.append("entry.37940007", formData.city);
+    formPayload.append("entry.185221955", formData.country);
+    formPayload.append("entry.399668613", language);
+    formPayload.append("entry.2092957137", "SLB Landing Page");
 
-      setFormData({ name: "", phone: "", email: "", city: "", country: "" });
-      setFormStatus("success");
-    } catch (error) {
-      setFormStatus("error");
-    }
-  };
+    await fetch(GOOGLE_FORM_ACTION_URL, {
+      method: "POST",
+      mode: "no-cors",
+      body: formPayload,
+    });
+
+    setFormData({
+      name: "",
+      phone: "",
+      email: "",
+      city: "",
+      country: "",
+    });
+
+    setFormStatus("success");
+  } catch (error) {
+    setFormStatus("error");
+  }
+};
 
   return (
     <main dir={t.dir} className={`min-h-screen bg-[#FBF8F1] text-[#0B1320] ${textAlign}`}>

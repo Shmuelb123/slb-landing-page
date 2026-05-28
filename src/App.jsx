@@ -339,8 +339,14 @@ function TextInput({ label, value, onChange, type = "text", required = false }) 
 }
 
 export default function LandingPage() {
-  const [language, setLanguage] = useState("he");
-  const [formData, setFormData] = useState({ name: "", phone: "", email: "", city: "", country: "" });
+const getInitialLanguage = () => {
+  if (typeof window === "undefined") return "he";
+
+  const params = new URLSearchParams(window.location.search);
+  return params.get("lang") === "en" ? "en" : "he";
+};
+
+const [language, setLanguage] = useState(getInitialLanguage);  const [formData, setFormData] = useState({ name: "", phone: "", email: "", city: "", country: "" });
   const [formStatus, setFormStatus] = useState("idle");
   const [showGoalCard, setShowGoalCard] = useState(false);
   const [openFaq, setOpenFaq] = useState(null);

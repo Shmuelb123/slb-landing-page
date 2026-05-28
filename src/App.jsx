@@ -32,8 +32,8 @@ const data = {
     badge: "Shomron Legacy Builders - קהילת שותפים שבונה את עתיד השומרון",
     heroTitle: "הזדמנות היסטורית להיות שותפים בבניין השומרון.",
     heroText:
-      "הצטרפו כשותפים חודשיים לקהילה בינלאומית שמחברת ידידי ישראל למשפחות, יישובים ופרויקטים בשטח - כדי לבנות נוכחות, חיים, ביטחון ועתיד בלב הארץ.",
-    primaryCta: "הצטרף כשותף חודשי",
+      "הצטרפו כשותפים קבועים לקהילה בינלאומית שמחברת ידידי ישראל למשפחות, יישובים ופרויקטים בשטח - כדי לבנות נוכחות, חיים, ביטחון ועתיד בלב הארץ.",
+    primaryCta: "הצטרף כשותף מייסד",
     secondaryCta: "קבל פרטים נוספים",
     floatingGoalKicker: "יעד ראשוני",
     floatingGoalTitle: "250 שותפים ראשונים!",
@@ -43,22 +43,22 @@ const data = {
     heroCardKicker: "המסר שלנו",
     heroCardTitle: "השומרון לא נבנה מקמפיין אחד. הוא נבנה משותפות מתמשכת.",
     heroCardText:
-      "כששותפים רבים מצטרפים בהוראת קבע חודשית - כל אחד לפי יכולתו - נוצרת תשתית קבועה שמאפשרת לבנות, לחזק ולהשפיע לאורך זמן.",
+      "כששותפים רבים מצטרפים בשותפות קבועה - כל אחד לפי יכולתו - נוצרת תשתית יציבה שמאפשרת לבנות, לחזק ולהשפיע לאורך זמן.",
     monthlyFrom: "החל מ-",
-    monthlyLabel: "שותפות חודשית",
+    monthlyLabel: "שותפות קבועה",
     whyKicker: "למה זה שונה?",
-    whyTitle: "לא עוד קמפיין חד-פעמי. קהילה של שותפים חודשיים.",
+    whyTitle: "לא עוד קמפיין חד-פעמי. קהילה של שותפים קבועים.",
     whyText:
-      "בכל יום עולים קמפיינים חדשים. רובם מבקשים עזרה לרגע. Shomron Legacy Builders נבנה כדי ליצור חיבור עמוק ומתמשך לשומרון: קהילה של אנשים שבוחרים לקחת חלק בכל חודש בבניין משפחות, קהילות, ביטחון וחיים.",
+      "בכל יום עולים קמפיינים חדשים. רובם מבקשים עזרה לרגע. Shomron Legacy Builders נבנה כדי ליצור חיבור עמוק ומתמשך לשומרון: קהילה של אנשים שבוחרים לקחת חלק באופן קבוע בבניין משפחות, קהילות, ביטחון וחיים.",
     whyTagline: "הרבה שותפים. שליחות אחת. השפעה אמיתית.",
     activityKicker: "קצת על הפעילות שלנו",
     activityTitle: "מחברים שותפים לעשייה אמיתית בשטח",
     activityText:
       "SLB נועדה לחבר ידידים ושותפים מהארץ ומהעולם לעשייה מתמשכת בשומרון - דרך חיזוק קהילות, תמיכה בפרויקטים, עדכונים מהשטח וחיבור חי לאנשים ולמקומות.",
-    monthlyKicker: "שותפות חודשית",
+    monthlyKicker: "רמות שותפות",
     monthlyTitle: "בחר את רמת השותפות שלך",
     monthlyText:
-      "לא כל שותף צריך לממן פרויקט שלם. כשאנשים רבים מצטרפים יחד בהוראת קבע חודשית, גם השתתפות קבועה ונגישה הופכת לכוח גדול בשטח.",
+      "לא כל שותף צריך לממן פרויקט שלם. כשאנשים רבים מצטרפים יחד בשותפות קבועה, גם השתתפות נגישה הופכת לכוח גדול בשטח.",
     popular: "מומלץ",
     monthlyCta: "הצטרף עכשיו",
     benefitsKicker: "מה מקבלים המצטרפים?",
@@ -74,7 +74,7 @@ const data = {
     finalText:
       "השאר פרטים ונחזור אליך עם אפשרות ההצטרפות המתאימה לך - בישראל, בארה\"ב או דרך שיחה אישית.",
     formTitle: "השאר פרטים",
-    formSubtitle: "נחזור אליך עם פרטים על הצטרפות כשותף חודשי ל-SLB.",
+    formSubtitle: "נחזור אליך עם פרטים על הצטרפות כשותף קבוע ל-SLB.",
     name: "שם מלא",
     phone: "טלפון",
     email: "אימייל",
@@ -90,8 +90,8 @@ const data = {
     badge: "Shomron Legacy Builders - a community of partners building Shomron's future",
     heroTitle: "A historic opportunity to become partners in building the Shomron.",
     heroText:
-      "Join as a monthly partner in an international community connecting friends of Israel to families, communities, and projects on the ground - to build presence, life, security, and a future in the Shomron, Israel's biblical heartland.",
-    primaryCta: "Join as a monthly partner",
+      "Join as a committed partner in an international community connecting friends of Israel to families, communities, and projects on the ground - to build presence, life, security, and a future in the Shomron, Israel's biblical heartland.",
+    primaryCta: "Become a founding partner",
     secondaryCta: "Get more details",
     floatingGoalKicker: "First goal",
     floatingGoalTitle: "250 founding partners!",
@@ -101,22 +101,22 @@ const data = {
     heroCardKicker: "Our message",
     heroCardTitle: "The Shomron is not built by one campaign. It is built through steady partnership.",
     heroCardText:
-      "When many partners join through monthly giving - each according to their ability - it creates a steady foundation for long-term building, strengthening, and impact.",
+      "When many partners join through steady partnership - each according to their ability - it creates a stable foundation for long-term building, strengthening, and impact.",
     monthlyFrom: "From",
-    monthlyLabel: "monthly partnership",
+    monthlyLabel: "steady partnership",
     whyKicker: "Why this is different",
-    whyTitle: "Not another one-time campaign. A community of monthly partners.",
+    whyTitle: "Not another one-time campaign. A community of committed partners.",
     whyText:
-      "New campaigns appear every day. Most ask for help in the moment. Shomron Legacy Builders is built for something deeper: a lasting connection to the Shomron through a community of people who choose to take part every month in building families, communities, security, and life.",
+      "New campaigns appear every day. Most ask for help in the moment. Shomron Legacy Builders is built for something deeper: a lasting connection to the Shomron through a community of people who choose to take part consistently in building families, communities, security, and life.",
     whyTagline: "Many partners. One mission. Real impact.",
     activityKicker: "What we do",
     activityTitle: "Connecting partners to real impact on the ground",
     activityText:
       "SLB connects friends and partners in Israel and around the world to ongoing work in the Shomron - strengthening communities, supporting projects, sharing field updates, and creating a living connection to the people and places on the ground.",
-    monthlyKicker: "Monthly partnership",
+    monthlyKicker: "Partnership levels",
     monthlyTitle: "Choose your partnership level",
     monthlyText:
-      "Not every partner needs to fund an entire project. When many people join together through monthly giving, steady and accessible participation becomes real strength on the ground.",
+      "Not every partner needs to fund an entire project. When many people join together through steady partnership, accessible participation becomes real strength on the ground.",
     popular: "Recommended",
     monthlyCta: "Join now",
     benefitsKicker: "Member benefits",
@@ -132,7 +132,7 @@ const data = {
     finalText:
       "Leave your details and we will follow up with the right monthly partnership option - in Israel, in the U.S., or through a personal conversation.",
     formTitle: "Leave your details",
-    formSubtitle: "We will follow up with details about joining SLB as a monthly partner.",
+    formSubtitle: "We will follow up with details about joining SLB as a committed partner.",
     name: "Full name",
     phone: "Phone",
     email: "Email",
@@ -166,7 +166,7 @@ const plans = {
       main: "כ־₪200",
       sub: "$72",
       featured: false,
-      perks: ["עדכונים מהשטח", "הזמנה לעדכוני Zoom חודשיים", "תעודת בונה מורשת השומרון דיגיטלית"],
+      perks: ["עדכונים מהשטח", "הזמנה למפגשי Zoom תקופתיים", "תעודת בונה מורשת השומרון דיגיטלית"],
     },
     {
       name: "Community Partner",
@@ -192,7 +192,7 @@ const plans = {
       main: "$72",
       sub: "approx. ₪200",
       featured: false,
-      perks: ["Field updates", "Invitation to monthly Zoom briefings", "Digital Shomron Legacy Builder certificate"],
+      perks: ["Field updates", "Invitation to periodic Zoom briefings", "Digital Shomron Legacy Builder certificate"],
     },
     {
       name: "Community Partner",
@@ -216,7 +216,7 @@ const plans = {
 const faqs = {
   he: [
     {
-      question: "האם זו שותפות חודשית?",
+      question: "האם זו שותפות קבועה?",
       answer:
         "כן. SLB נבנית כקהילה של שותפים קבועים - לא כקמפיין חד-פעמי בעת צרה. המטרה היא ליצור בסיס גדול, יציב ומתמשך, שמאפשר לבנות, לחזק ולהשפיע בשומרון ועל שאר מדינת ישראל לאורך זמן.",
     },
@@ -233,12 +233,12 @@ const faqs = {
     {
       question: "האם אפשר לשנות או לבטל את השותפות?",
       answer:
-        "כן. ניתן לעדכן, לשנות או לבטל את השותפות החודשית בהתאם לאפשרויות הסליקה והוראות JGive. אנחנו מאמינים שככל שתכירו מקרוב את העשייה וההשפעה, תרגישו גאווה להיות חלק מהקהילה שמעצבת את עתיד עם ישראל בארץ ישראל.",
+        "כן. ניתן לעדכן, לשנות או לבטל את השותפות בהתאם לאפשרויות הסליקה והוראות JGive. אנחנו מאמינים שככל שתכירו מקרוב את העשייה וההשפעה, תרגישו גאווה להיות חלק מהקהילה שמעצבת את עתיד עם ישראל בארץ ישראל.",
     },
   ],
   en: [
     {
-      question: "Is this a monthly partnership?",
+      question: "Is this an ongoing partnership?",
       answer:
         "Yes. SLB is built as a community of ongoing partners - not as a one-time campaign in a moment of crisis. The goal is to create a large, stable, and lasting foundation that can build, strengthen, and create impact in the Shomron and across Israel over time.",
     },
@@ -255,21 +255,21 @@ const faqs = {
     {
       question: "Can I change or cancel my partnership?",
       answer:
-        "Yes. Monthly partnerships can be updated, changed, or canceled according to the payment platform's available options. We believe that as you get to know the work and its impact, you will feel proud to be part of a community shaping the future of the Jewish people in the Land of Israel.",
+        "Yes. Your partnership can be updated, changed, or canceled according to the payment platform's available options. We believe that as you get to know the work and its impact, you will feel proud to be part of a community shaping the future of the Jewish people in the Land of Israel.",
     },
   ],
 };
 
 const benefits = {
   he: [
-    [Video, "עדכוני Zoom חודשיים", "מפגשים חודשיים עם מומחים, אנשי שטח, מנהיגי קהילות ודמויות מהשומרון."],
+    [Video, "מפגשי Zoom תקופתיים", "מפגשים תקופתיים עם מומחים, אנשי שטח, מנהיגי קהילות ודמויות מהשומרון."],
     [Shield, "עדכונים מהשטח", "סרטונים, תמונות וסיפורים קצרים מהפרויקטים, המשפחות והיישובים."],
     [Route, "סיורים ואירועים", "הזמנות לסיורים, אירועים וחוויות קהילתיות בשומרון."],
     [Gift, "מרצ׳נדייז אקסקלוסיבי", "פריטי SLB ייחודיים לפי רמת השותפות."],
     [FileCheck2, "תעודת בונה מורשת השומרון", "תעודת הוקרה לשותפים שלוקחים חלק בבניין העתיד של השומרון."],
   ],
   en: [
-    [Video, "Monthly Zoom briefings", "Monthly sessions with experts, field leaders, community representatives, and voices from the Shomron."],
+    [Video, "Periodic Zoom briefings", "Periodic sessions with experts, field leaders, community representatives, and voices from the Shomron."],
     [Shield, "Field updates", "Videos, photos, and short stories from projects, families, and communities."],
     [Route, "Tours and events", "Invitations to tours, events, and community experiences in the Shomron."],
     [Gift, "Exclusive merchandise", "Unique SLB items according to partnership level."],
@@ -339,14 +339,15 @@ function TextInput({ label, value, onChange, type = "text", required = false }) 
 }
 
 export default function LandingPage() {
-const getInitialLanguage = () => {
-  if (typeof window === "undefined") return "he";
+  const getInitialLanguage = () => {
+    if (typeof window === "undefined") return "he";
 
-  const params = new URLSearchParams(window.location.search);
-  return params.get("lang") === "en" ? "en" : "he";
-};
+    const params = new URLSearchParams(window.location.search);
+    return params.get("lang") === "en" ? "en" : "he";
+  };
 
-const [language, setLanguage] = useState(getInitialLanguage);  const [formData, setFormData] = useState({ name: "", phone: "", email: "", city: "", country: "" });
+  const [language, setLanguage] = useState(getInitialLanguage);
+  const [formData, setFormData] = useState({ name: "", phone: "", email: "", city: "", country: "" });
   const [formStatus, setFormStatus] = useState("idle");
   const [showGoalCard, setShowGoalCard] = useState(false);
   const [openFaq, setOpenFaq] = useState(null);
@@ -358,6 +359,14 @@ const [language, setLanguage] = useState(getInitialLanguage);  const [formData, 
   const heroGradient = isHebrew
     ? "bg-gradient-to-l from-[#0B1320]/85 via-[#0B1320]/55 to-[#0B1320]/20"
     : "bg-gradient-to-r from-[#0B1320]/85 via-[#0B1320]/55 to-[#0B1320]/20";
+
+  const changeLanguage = (nextLanguage) => {
+    setLanguage(nextLanguage);
+
+    const url = new URL(window.location.href);
+    url.searchParams.set("lang", nextLanguage);
+    window.history.replaceState({}, "", url.toString());
+  };
 
   useEffect(() => {
     const wasClosed = window.localStorage.getItem("slbGoalCardClosed") === "true";
@@ -424,7 +433,7 @@ const [language, setLanguage] = useState(getInitialLanguage);  const [formData, 
 <div className="absolute inset-0 bg-gradient-to-t from-[#0B1320]/75 via-transparent to-[#0B1320]/10" />
 
         <div className="absolute left-6 top-6 z-20 md:left-10 md:top-8">
-          <Button variant="outlineLight" onClick={() => setLanguage(isHebrew ? "en" : "he")}>
+          <Button variant="outlineLight" onClick={() => changeLanguage(isHebrew ? "en" : "he")}>
             <Languages className="h-4 w-4" />
             <span className="mx-2">{t.switchLabel}</span>
           </Button>
@@ -576,6 +585,10 @@ const [language, setLanguage] = useState(getInitialLanguage);  const [formData, 
   {t.taxShortText}
 </div>
 
+           
+        </div>
+      </section>
+
       <section className="bg-[#FBF8F1] px-6 py-18 md:px-10 md:py-20">
         <div className="mx-auto max-w-7xl">
           <Heading kicker={t.faqKicker} title={t.faqTitle} />
@@ -615,9 +628,6 @@ const [language, setLanguage] = useState(getInitialLanguage);  const [formData, 
               );
             })}
           </div>
-        </div>
-      </section>
-           
         </div>
       </section>
 

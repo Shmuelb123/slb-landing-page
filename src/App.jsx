@@ -21,10 +21,9 @@ const ISRAEL_PAYMENT_URL_EN = "https://www.jgive.com/new/en/ils/charity-organiza
 const USA_PAYMENT_URL = "PASTE_US_501C3_TAX_DEDUCTIBLE_PAYMENT_LINK_HERE";
 
 const HERO_IMAGE = "/images/shomron-hero.jpeg";
-const HILLS_IMAGE = "/images/shomron-hills.jpeg";
-const VILLAGE_IMAGE = "/images/shomron-village-sunset.jpeg";
-const COMMUNITY_IMAGE = "/images/shomron-new-community.jpeg";
-const HAR_BRACHA_IMAGE = "/images/har-bracha-view.jpg";
+const WHY_IMAGE = "/images/shomron-village-sunset.jpeg";
+const BENEFITS_IMAGE = "/images/har-bracha-view.jpg";
+const CONTACT_IMAGE = "/images/contact-background.jpeg";
 
 const data = {
   he: {
@@ -398,7 +397,7 @@ export default function LandingPage() {
 
       <section className="relative overflow-hidden px-6 py-18 md:px-10 md:py-20">
         <img
-          src={VILLAGE_IMAGE}
+          src={WHY_IMAGE}
           alt=""
           className="absolute inset-0 h-full w-full object-cover opacity-85"
         />
@@ -408,32 +407,6 @@ export default function LandingPage() {
           <Heading kicker={t.whyKicker} title={t.whyTitle} text={t.whyText} />
           <div className="mx-auto mt-8 w-fit rounded-2xl bg-white/90 px-6 py-4 text-center text-lg font-bold text-[#344D32] shadow-lg ring-1 ring-[#E9D9A8] backdrop-blur-md">
             {t.whyTagline}
-          </div>
-        </div>
-      </section>
-
-      <section className="relative overflow-hidden px-6 py-18 md:px-10 md:py-20">
-        <img
-src={HAR_BRACHA_IMAGE}
-          alt=""
-          className="absolute inset-0 h-full w-full object-cover opacity-90"
-        />
-        <div className="absolute inset-0 bg-[#F4EFE6]/38" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#F4EFE6]/62 via-[#F4EFE6]/15 to-[#F4EFE6]/65" />
-        <div className="relative mx-auto max-w-7xl">
-          <Heading kicker={t.benefitsKicker} title={t.benefitsTitle} text={t.benefitsText} />
-          <div className="mt-10 grid gap-4 md:grid-cols-5">
-            {benefits[language].map(([Icon, title, text]) => (
-              <Card key={title} className="bg-white/92 backdrop-blur-sm">
-                <div className="p-5">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#E9D9A8]/55 text-[#344D32]">
-                    <Icon className="h-5 w-5" />
-                  </div>
-                  <h3 className="mt-4 text-lg font-bold text-[#0B1320]">{title}</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">{text}</p>
-                </div>
-              </Card>
-            ))}
           </div>
         </div>
       </section>
@@ -477,13 +450,39 @@ src={HAR_BRACHA_IMAGE}
         </div>
       </section>
 
+      <section className="relative overflow-hidden px-6 py-18 md:px-10 md:py-20">
+        <img
+          src={BENEFITS_IMAGE}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover opacity-90"
+        />
+        <div className="absolute inset-0 bg-[#F4EFE6]/38" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#F4EFE6]/62 via-[#F4EFE6]/15 to-[#F4EFE6]/65" />
+        <div className="relative mx-auto max-w-7xl">
+          <Heading kicker={t.benefitsKicker} title={t.benefitsTitle} text={t.benefitsText} />
+          <div className="mt-10 grid gap-4 md:grid-cols-5">
+            {benefits[language].map(([Icon, title, text]) => (
+              <Card key={title} className="bg-white/92 backdrop-blur-sm">
+                <div className="p-5">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#E9D9A8]/55 text-[#344D32]">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <h3 className="mt-4 text-lg font-bold text-[#0B1320]">{title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">{text}</p>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="contact-form" className="relative overflow-hidden bg-[#0B1320] px-6 py-18 text-white md:px-10 md:py-20">
         <img
-          src={HERO_IMAGE}
+          src={CONTACT_IMAGE}
           alt=""
-          className="absolute inset-0 h-full w-full object-cover object-center opacity-70"
+          className="absolute inset-0 h-full w-full object-cover object-center opacity-75"
         />
-        <div className="absolute inset-0 bg-[#0B1320]/64" />
+        <div className="absolute inset-0 bg-[#0B1320]/62" />
         <div className="relative mx-auto max-w-7xl">
           <Heading kicker={t.finalKicker} title={t.finalTitle} text={t.finalText} light />
           <div className="mx-auto mt-10 max-w-2xl rounded-[2rem] bg-white p-6 text-[#0B1320] shadow-2xl md:p-8">

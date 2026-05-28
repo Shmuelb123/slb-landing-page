@@ -51,6 +51,10 @@ const data = {
     whyText:
       "בכל יום עולים קמפיינים חדשים. רובם מבקשים עזרה לרגע. Shomron Legacy Builders נבנה כדי ליצור חיבור עמוק ומתמשך לשומרון: קהילה של אנשים שבוחרים לקחת חלק בכל חודש בבניין משפחות, קהילות, ביטחון וחיים.",
     whyTagline: "הרבה שותפים. שליחות אחת. השפעה אמיתית.",
+    activityKicker: "קצת על הפעילות שלנו",
+    activityTitle: "מחברים שותפים לעשייה אמיתית בשטח",
+    activityText:
+      "SLB נועדה לחבר ידידים ושותפים מהארץ ומהעולם לעשייה מתמשכת בשומרון - דרך חיזוק קהילות, תמיכה בפרויקטים, עדכונים מהשטח וחיבור חי לאנשים ולמקומות.",
     monthlyKicker: "שותפות חודשית",
     monthlyTitle: "בחר את רמת השותפות שלך",
     monthlyText:
@@ -105,6 +109,10 @@ const data = {
     whyText:
       "New campaigns appear every day. Most ask for help in the moment. Shomron Legacy Builders is built for something deeper: a lasting connection to the Shomron through a community of people who choose to take part every month in building families, communities, security, and life.",
     whyTagline: "Many partners. One mission. Real impact.",
+    activityKicker: "What we do",
+    activityTitle: "Connecting partners to real impact on the ground",
+    activityText:
+      "SLB connects friends and partners in Israel and around the world to ongoing work in the Shomron - strengthening communities, supporting projects, sharing field updates, and creating a living connection to the people and places on the ground.",
     monthlyKicker: "Monthly partnership",
     monthlyTitle: "Choose your partnership level",
     monthlyText:
@@ -136,6 +144,20 @@ const data = {
   },
 };
 
+const activities = {
+  he: [
+    [Route, "הקמת יישובים חדשים", "מסייעים בהקמת יישובים חדשים בשומרון ובחיזוק ההתיישבות בשטח."],
+    [Shield, "חיזוק הביטחון", "מחזקים את הביטחון ביישובים ובאזור כדי לאפשר חיים יציבים ובטוחים יותר."],
+    [HeartHandshake, "בניית מוסדות קהילה", "עוזרים בבניית בתי כנסת, בתי מדרש, מקוואות ומוסדות שמחזקים את חיי הקהילה."],
+    [Gift, "קידום פרויקטים חברתיים", "מקדמים פרויקטים בתחומי קהילה, רווחה, חינוך ועוד - לפי הצרכים שעולים מהשטח."],
+  ],
+  en: [
+    [Route, "Building new communities", "Supporting the establishment of new communities in the Shomron and strengthening Jewish presence on the ground."],
+    [Shield, "Strengthening security", "Helping strengthen security in communities and across the region, enabling safer and more stable daily life."],
+    [HeartHandshake, "Building community institutions", "Helping build synagogues, study halls, mikvaot, and institutions that strengthen community life."],
+    [Gift, "Advancing social projects", "Advancing projects in community, welfare, education, and additional fields according to needs on the ground."],
+  ],
+};
 const plans = {
   he: [
     {
@@ -465,6 +487,23 @@ export default function LandingPage() {
           <Heading kicker={t.whyKicker} title={t.whyTitle} text={t.whyText} />
           <div className="mx-auto mt-8 w-fit rounded-2xl bg-white/90 px-6 py-4 text-center text-lg font-bold text-[#344D32] shadow-lg ring-1 ring-[#E9D9A8] backdrop-blur-md">
             {t.whyTagline}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#0B1320] px-6 py-18 text-white md:px-10 md:py-20">
+        <div className="mx-auto max-w-7xl">
+          <Heading kicker={t.activityKicker} title={t.activityTitle} text={t.activityText} light />
+          <div className="mt-10 grid gap-5 md:grid-cols-4">
+            {activities[language].map(([Icon, title, text]) => (
+              <div key={title} className="rounded-3xl border border-white/10 bg-white/10 p-6 shadow-xl backdrop-blur transition hover:-translate-y-1 hover:bg-white/15">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#C8A24A] text-[#0B1320]">
+                  <Icon className="h-6 w-6" />
+                </div>
+                <h3 className="mt-5 text-xl font-bold text-white">{title}</h3>
+                <p className="mt-3 text-sm leading-7 text-slate-300">{text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

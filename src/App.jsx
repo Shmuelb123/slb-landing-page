@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowLeft,
@@ -20,8 +20,11 @@ const ISRAEL_PAYMENT_URL_HE = "https://www.jgive.com/new/he/ils/charity-organiza
 const ISRAEL_PAYMENT_URL_EN = "https://www.jgive.com/new/en/ils/charity-organizations/4717";
 const USA_PAYMENT_URL = "PASTE_US_501C3_TAX_DEDUCTIBLE_PAYMENT_LINK_HERE";
 
-const HERO_IMAGE = "/Images/shomron-hero.jpeg";
-const HILLS_IMAGE = "/Images/shomron-hills.jpeg";
+const HERO_IMAGE = "/images/shomron-hero.jpeg";
+const HILLS_IMAGE = "/images/shomron-hills.jpeg";
+const VILLAGE_IMAGE = "/images/shomron-village-sunset.jpeg";
+const COMMUNITY_IMAGE = "/images/shomron-new-community.jpeg";
+const HAR_BRACHA_IMAGE = "/images/har-bracha-view.jpg";
 
 const data = {
   he: {
@@ -33,6 +36,11 @@ const data = {
       "הצטרפו כשותפים חודשיים לקהילה בינלאומית שמחברת ידידי ישראל למשפחות, יישובים ופרויקטים בשטח — כדי לבנות נוכחות, חיים, ביטחון ועתיד בלב הארץ.",
     primaryCta: "הצטרף כשותף חודשי",
     secondaryCta: "קבל פרטים נוספים",
+    floatingGoalKicker: "יעד ראשוני",
+    floatingGoalTitle: "250 שותפים ראשונים!",
+    floatingGoalText: "היו מהראשונים להצטרף לקהילה שבונה את עתיד השומרון.",
+    floatingGoalNote: "כל שותף מקרב אותנו ליעד.",
+    floatingGoalCta: "הצטרף עכשיו",
     heroCardKicker: "המסר שלנו",
     heroCardTitle: "השומרון לא נבנה מקמפיין אחד. הוא נבנה משותפות מתמשכת.",
     heroCardText:
@@ -74,14 +82,19 @@ taxShortText:
   en: {
     dir: "ltr",
     switchLabel: "עברית",
-    badge: "Shomron Legacy Builders — a community of partners building Samaria’s future",
-    heroTitle: "A historic opportunity to become partners in building Samaria.",
+    badge: "Shomron Legacy Builders — a community of partners building Shomron’s future",
+    heroTitle: "A historic opportunity to become partners in building the Shomron.",
     heroText:
-      "Join as a monthly partner in an international community connecting friends of Israel to families, communities, and projects on the ground — to build presence, life, security, and a future in Israel’s biblical heartland.",
+      "Join as a monthly partner in an international community connecting friends of Israel to families, communities, and projects on the ground — to build presence, life, security, and a future in the Shomron, Israel’s biblical heartland.",
     primaryCta: "Join as a monthly partner",
     secondaryCta: "Get more details",
+    floatingGoalKicker: "First goal",
+    floatingGoalTitle: "250 founding partners!",
+    floatingGoalText: "Be among the first to join the community building the Shomron’s future.",
+    floatingGoalNote: "Every partner brings us closer.",
+    floatingGoalCta: "Join now",
     heroCardKicker: "Our message",
-    heroCardTitle: "Samaria is not built by one campaign. It is built through steady partnership.",
+    heroCardTitle: "The Shomron is not built by one campaign. It is built through steady partnership.",
     heroCardText:
       "When many partners join through monthly giving — each according to their ability — it creates a steady foundation for long-term building, strengthening, and impact.",
     monthlyFrom: "From",
@@ -89,7 +102,7 @@ taxShortText:
     whyKicker: "Why this is different",
     whyTitle: "Not another one-time campaign. A community of monthly partners.",
     whyText:
-      "New campaigns appear every day. Most ask for help in the moment. Shomron Legacy Builders is built for something deeper: a lasting connection to Samaria through a community of people who choose to take part every month in building families, communities, security, and life.",
+      "New campaigns appear every day. Most ask for help in the moment. Shomron Legacy Builders is built for something deeper: a lasting connection to the Shomron through a community of people who choose to take part every month in building families, communities, security, and life.",
     whyTagline: "Many partners. One mission. Real impact.",
     monthlyKicker: "Monthly partnership",
     monthlyTitle: "Choose your partnership level",
@@ -98,9 +111,9 @@ taxShortText:
     popular: "Recommended",
     monthlyCta: "Join now",
     benefitsKicker: "Member benefits",
-    benefitsTitle: "Joining SLB means entering a community with a living connection to Samaria.",
+    benefitsTitle: "Joining SLB means entering a community with a living connection to the Shomron.",
     benefitsText:
-      "Members receive updates, access, experiences, and a sense of belonging to an international community building Samaria over time.",
+      "Members receive updates, access, experiences, and a sense of belonging to an international community building the Shomron over time.",
     taxShortText:
       "Joining through JGive provides an Israeli Section 46 receipt. U.S. donors will also be able to join through a 501(c)(3) route for a U.S. tax-deductible receipt, subject to eligibility and applicable tax rules.",
     finalKicker: "The next step",
@@ -150,11 +163,11 @@ const plans = {
   en: [
     {
       name: "Builder",
-      label: "Samaria Builder",
+      label: "Shomron Builder",
       main: "$72",
       sub: "approx. ₪200",
       featured: false,
-      perks: ["Field updates", "Invitation to monthly Zoom briefings", "Digital Samaria Legacy Builder certificate"],
+      perks: ["Field updates", "Invitation to monthly Zoom briefings", "Digital Shomron Legacy Builder certificate"],
     },
     {
       name: "Community Partner",
@@ -162,7 +175,7 @@ const plans = {
       main: "$90",
       sub: "approx. ₪250",
       featured: true,
-      perks: ["All Builder benefits", "Expanded field updates", "Priority registration for SLB tours", "Invitations to selected events in Samaria"],
+      perks: ["All Builder benefits", "Expanded field updates", "Priority registration for SLB tours", "Invitations to selected events in the Shomron"],
     },
     {
       name: "Legacy Partner",
@@ -170,7 +183,7 @@ const plans = {
       main: "$180",
       sub: "approx. ₪500",
       featured: false,
-      perks: ["All Community Partner benefits", "Exclusive merchandise", "Invitation to a VIP tour in Samaria", "Printed recognition certificate", "Option for a periodic personal update call"],
+      perks: ["All Community Partner benefits", "Exclusive merchandise", "Invitation to a VIP tour in the Shomron", "Printed recognition certificate", "Option for a periodic personal update call"],
     },
   ],
 };
@@ -184,11 +197,11 @@ const benefits = {
     [FileCheck2, "תעודת בונה מורשת השומרון", "תעודת הוקרה לשותפים שלוקחים חלק בבניין העתיד של השומרון."],
   ],
   en: [
-    [Video, "Monthly Zoom briefings", "Monthly sessions with experts, field leaders, community representatives, and voices from Samaria."],
+    [Video, "Monthly Zoom briefings", "Monthly sessions with experts, field leaders, community representatives, and voices from the Shomron."],
     [Shield, "Field updates", "Videos, photos, and short stories from projects, families, and communities."],
-    [Route, "Tours and events", "Invitations to tours, events, and community experiences in Samaria."],
+    [Route, "Tours and events", "Invitations to tours, events, and community experiences in the Shomron."],
     [Gift, "Exclusive merchandise", "Unique SLB items according to partnership level."],
-    [FileCheck2, "Samaria Legacy Builder certificate", "A recognition certificate for partners taking part in building Samaria’s future."],
+    [FileCheck2, "Shomron Legacy Builder certificate", "A recognition certificate for partners taking part in building the Shomron’s future."],
   ],
 };
 
@@ -257,6 +270,7 @@ export default function LandingPage() {
   const [language, setLanguage] = useState("he");
   const [formData, setFormData] = useState({ name: "", phone: "", email: "", city: "", country: "" });
   const [formStatus, setFormStatus] = useState("idle");
+  const [showGoalCard, setShowGoalCard] = useState(false);
 
   const t = data[language];
   const isHebrew = language === "he";
@@ -265,6 +279,15 @@ export default function LandingPage() {
   const heroGradient = isHebrew
     ? "bg-gradient-to-l from-[#0B1320]/85 via-[#0B1320]/55 to-[#0B1320]/20"
     : "bg-gradient-to-r from-[#0B1320]/85 via-[#0B1320]/55 to-[#0B1320]/20";
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      setShowGoalCard(true);
+    }, 5000);
+
+    return () => window.clearTimeout(timer);
+  }, []);
+
   const updateField = (field, value) => {
     setFormData((current) => ({ ...current, [field]: value }));
   };
@@ -374,11 +397,16 @@ export default function LandingPage() {
       </section>
 
       <section className="relative overflow-hidden px-6 py-18 md:px-10 md:py-20">
-        <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: `url('${HILLS_IMAGE}')` }} />
-        <div className="absolute inset-0 bg-[#FBF8F1]/92" />
+        <img
+          src={VILLAGE_IMAGE}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover opacity-85"
+        />
+        <div className="absolute inset-0 bg-[#FBF8F1]/50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FBF8F1]/70 via-[#FBF8F1]/25 to-[#FBF8F1]/72" />
         <div className="relative mx-auto max-w-7xl">
           <Heading kicker={t.whyKicker} title={t.whyTitle} text={t.whyText} />
-          <div className="mx-auto mt-8 w-fit rounded-2xl bg-white/85 px-6 py-4 text-center text-lg font-bold text-[#344D32] shadow-sm ring-1 ring-[#E9D9A8] backdrop-blur">
+          <div className="mx-auto mt-8 w-fit rounded-2xl bg-white/90 px-6 py-4 text-center text-lg font-bold text-[#344D32] shadow-lg ring-1 ring-[#E9D9A8] backdrop-blur-md">
             {t.whyTagline}
           </div>
         </div>
@@ -423,12 +451,19 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="bg-[#F4EFE6] px-6 py-18 md:px-10 md:py-20">
-        <div className="mx-auto max-w-7xl">
+      <section className="relative overflow-hidden px-6 py-18 md:px-10 md:py-20">
+        <img
+src={HAR_BRACHA_IMAGE}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover opacity-90"
+        />
+        <div className="absolute inset-0 bg-[#F4EFE6]/38" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#F4EFE6]/62 via-[#F4EFE6]/15 to-[#F4EFE6]/65" />
+        <div className="relative mx-auto max-w-7xl">
           <Heading kicker={t.benefitsKicker} title={t.benefitsTitle} text={t.benefitsText} />
           <div className="mt-10 grid gap-4 md:grid-cols-5">
             {benefits[language].map(([Icon, title, text]) => (
-              <Card key={title} className="bg-white">
+              <Card key={title} className="bg-white/92 backdrop-blur-sm">
                 <div className="p-5">
                   <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#E9D9A8]/55 text-[#344D32]">
                     <Icon className="h-5 w-5" />
@@ -444,11 +479,11 @@ export default function LandingPage() {
 
       <section id="contact-form" className="relative overflow-hidden bg-[#0B1320] px-6 py-18 text-white md:px-10 md:py-20">
         <img
-  src={HILLS_IMAGE}
+  src={COMMUNITY_IMAGE}
   alt=""
-  className="absolute inset-0 h-full w-full object-cover opacity-20"
+  className="absolute inset-0 h-full w-full object-cover opacity-60"
 />
-        <div className="absolute inset-0 bg-[#0B1320]/88" />
+        <div className="absolute inset-0 bg-[#0B1320]/68" />
         <div className="relative mx-auto max-w-7xl">
           <Heading kicker={t.finalKicker} title={t.finalTitle} text={t.finalText} light />
           <div className="mx-auto mt-10 max-w-2xl rounded-[2rem] bg-white p-6 text-[#0B1320] shadow-2xl md:p-8">
@@ -477,6 +512,32 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+      {showGoalCard && (
+        <div className="fixed bottom-4 left-4 right-4 z-50 mx-auto max-w-sm rounded-[1.6rem] border border-[#E9D9A8]/70 bg-[#0B1320]/95 p-4 text-white shadow-2xl shadow-black/25 backdrop-blur md:left-6 md:right-auto md:mx-0 md:max-w-xs">
+          <button
+            type="button"
+            onClick={() => setShowGoalCard(false)}
+            className={`absolute top-3 flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-sm text-white/75 transition hover:bg-white/20 hover:text-white ${isHebrew ? "left-4" : "right-4"}`}
+            aria-label={isHebrew ? "סגור" : "Close"}
+          >
+            ×
+          </button>
+          <div className="pr-0 md:pr-2">
+            <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#E9D9A8]">{t.floatingGoalKicker}</p>
+            <p className="mt-2 text-2xl font-black tracking-tight text-[#C8A24A]">{t.floatingGoalTitle}</p>
+            <p className="mt-2 text-sm leading-6 text-white/85">{t.floatingGoalText}</p>
+            <p className="mt-2 text-xs font-semibold text-[#E9D9A8]">{t.floatingGoalNote}</p>
+            <a
+              href={isHebrew ? ISRAEL_PAYMENT_URL_HE : ISRAEL_PAYMENT_URL_EN}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-4 inline-flex w-full items-center justify-center rounded-2xl bg-[#C8A24A] px-4 py-3 text-sm font-bold text-[#0B1320] transition hover:bg-[#D8B85F]"
+            >
+              {t.floatingGoalCta}
+            </a>
+          </div>
+        </div>
+      )}
     </main>
   );
 }

@@ -412,6 +412,32 @@ export default function LandingPage() {
         </div>
       </section>
 
+      <section className="relative overflow-hidden px-6 py-18 md:px-10 md:py-20">
+        <img
+src={HAR_BRACHA_IMAGE}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover opacity-90"
+        />
+        <div className="absolute inset-0 bg-[#F4EFE6]/38" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#F4EFE6]/62 via-[#F4EFE6]/15 to-[#F4EFE6]/65" />
+        <div className="relative mx-auto max-w-7xl">
+          <Heading kicker={t.benefitsKicker} title={t.benefitsTitle} text={t.benefitsText} />
+          <div className="mt-10 grid gap-4 md:grid-cols-5">
+            {benefits[language].map(([Icon, title, text]) => (
+              <Card key={title} className="bg-white/92 backdrop-blur-sm">
+                <div className="p-5">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#E9D9A8]/55 text-[#344D32]">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <h3 className="mt-4 text-lg font-bold text-[#0B1320]">{title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">{text}</p>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="bg-[#FBF8F1] px-6 py-18 md:px-10 md:py-20">
         <div className="mx-auto max-w-7xl">
           <Heading kicker={t.monthlyKicker} title={t.monthlyTitle} text={t.monthlyText} />
@@ -448,32 +474,6 @@ export default function LandingPage() {
   {t.taxShortText}
 </div>
            
-        </div>
-      </section>
-
-      <section className="relative overflow-hidden px-6 py-18 md:px-10 md:py-20">
-        <img
-src={HAR_BRACHA_IMAGE}
-          alt=""
-          className="absolute inset-0 h-full w-full object-cover opacity-90"
-        />
-        <div className="absolute inset-0 bg-[#F4EFE6]/38" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#F4EFE6]/62 via-[#F4EFE6]/15 to-[#F4EFE6]/65" />
-        <div className="relative mx-auto max-w-7xl">
-          <Heading kicker={t.benefitsKicker} title={t.benefitsTitle} text={t.benefitsText} />
-          <div className="mt-10 grid gap-4 md:grid-cols-5">
-            {benefits[language].map(([Icon, title, text]) => (
-              <Card key={title} className="bg-white/92 backdrop-blur-sm">
-                <div className="p-5">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#E9D9A8]/55 text-[#344D32]">
-                    <Icon className="h-5 w-5" />
-                  </div>
-                  <h3 className="mt-4 text-lg font-bold text-[#0B1320]">{title}</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">{text}</p>
-                </div>
-              </Card>
-            ))}
-          </div>
         </div>
       </section>
 

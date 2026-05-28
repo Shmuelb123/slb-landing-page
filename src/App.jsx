@@ -29,10 +29,10 @@ const data = {
   he: {
     dir: "rtl",
     switchLabel: "English",
-    badge: "Shomron Legacy Builders — קהילת שותפים שבונה את עתיד השומרון",
+    badge: "Shomron Legacy Builders - קהילת שותפים שבונה את עתיד השומרון",
     heroTitle: "הזדמנות היסטורית להיות שותפים בבניין השומרון.",
     heroText:
-      "הצטרפו כשותפים חודשיים לקהילה בינלאומית שמחברת ידידי ישראל למשפחות, יישובים ופרויקטים בשטח — כדי לבנות נוכחות, חיים, ביטחון ועתיד בלב הארץ.",
+      "הצטרפו כשותפים חודשיים לקהילה בינלאומית שמחברת ידידי ישראל למשפחות, יישובים ופרויקטים בשטח - כדי לבנות נוכחות, חיים, ביטחון ועתיד בלב הארץ.",
     primaryCta: "הצטרף כשותף חודשי",
     secondaryCta: "קבל פרטים נוספים",
     floatingGoalKicker: "יעד ראשוני",
@@ -43,11 +43,11 @@ const data = {
     heroCardKicker: "המסר שלנו",
     heroCardTitle: "השומרון לא נבנה מקמפיין אחד. הוא נבנה משותפות מתמשכת.",
     heroCardText:
-      "כששותפים רבים מצטרפים בהוראת קבע חודשית — כל אחד לפי יכולתו — נוצרת תשתית קבועה שמאפשרת לבנות, לחזק ולהשפיע לאורך זמן.",
-    monthlyFrom: "החל מ־",
+      "כששותפים רבים מצטרפים בהוראת קבע חודשית - כל אחד לפי יכולתו - נוצרת תשתית קבועה שמאפשרת לבנות, לחזק ולהשפיע לאורך זמן.",
+    monthlyFrom: "החל מ-",
     monthlyLabel: "שותפות חודשית",
     whyKicker: "למה זה שונה?",
-    whyTitle: "לא עוד קמפיין חד־פעמי. קהילה של שותפים חודשיים.",
+    whyTitle: "לא עוד קמפיין חד-פעמי. קהילה של שותפים חודשיים.",
     whyText:
       "בכל יום עולים קמפיינים חדשים. רובם מבקשים עזרה לרגע. Shomron Legacy Builders נבנה כדי ליצור חיבור עמוק ומתמשך לשומרון: קהילה של אנשים שבוחרים לקחת חלק בכל חודש בבניין משפחות, קהילות, ביטחון וחיים.",
     whyTagline: "הרבה שותפים. שליחות אחת. השפעה אמיתית.",
@@ -58,17 +58,19 @@ const data = {
     popular: "מומלץ",
     monthlyCta: "הצטרף עכשיו",
     benefitsKicker: "מה מקבלים המצטרפים?",
-    benefitsTitle: "הצטרפות ל־SLB היא כניסה לקהילה עם חיבור חי לשומרון.",
+    benefitsTitle: "הצטרפות ל-SLB היא כניסה לקהילה עם חיבור חי לשומרון.",
     benefitsText:
       "המצטרפים מקבלים עדכונים, גישה, חוויות ותחושת שייכות לקהילה בינלאומית שבונה את השומרון לאורך זמן.",
-taxShortText:
-  "ההצטרפות מתבצעת דרך JGive וקרן שומרון, עם אפשרות לקבלת קבלה לפי סעיף 46 בישראל. לתורמים בארה״ב ניתן יהיה להצטרף גם דרך מסלול 501(c)(3) לקבלת U.S. tax-deductible receipt, בכפוף לזכאות ולכללי המס.",
+    taxShortText:
+      "ההצטרפות מתבצעת דרך JGive וקרן שומרון, עם אפשרות לקבלת קבלה לפי סעיף 46 בישראל. לתורמים בארה\"ב ניתן יהיה להצטרף גם דרך מסלול 501(c)(3) לקבלת U.S. tax-deductible receipt, בכפוף לזכאות ולכללי המס.",
+    faqKicker: "שאלות נפוצות",
+    faqTitle: "לפני שמצטרפים - כמה דברים שחשוב לדעת",
     finalKicker: "הצעד הבא",
     finalTitle: "רוצה להצטרף או לשמוע עוד?",
     finalText:
-      "השאר פרטים ונחזור אליך עם אפשרות ההצטרפות המתאימה לך — בישראל, בארה״ב או דרך שיחה אישית.",
+      "השאר פרטים ונחזור אליך עם אפשרות ההצטרפות המתאימה לך - בישראל, בארה\"ב או דרך שיחה אישית.",
     formTitle: "השאר פרטים",
-    formSubtitle: "נחזור אליך עם פרטים על הצטרפות כשותף חודשי ל־SLB.",
+    formSubtitle: "נחזור אליך עם פרטים על הצטרפות כשותף חודשי ל-SLB.",
     name: "שם מלא",
     phone: "טלפון",
     email: "אימייל",
@@ -81,10 +83,10 @@ taxShortText:
   en: {
     dir: "ltr",
     switchLabel: "עברית",
-    badge: "Shomron Legacy Builders — a community of partners building Shomron’s future",
+    badge: "Shomron Legacy Builders - a community of partners building Shomron's future",
     heroTitle: "A historic opportunity to become partners in building the Shomron.",
     heroText:
-      "Join as a monthly partner in an international community connecting friends of Israel to families, communities, and projects on the ground — to build presence, life, security, and a future in the Shomron, Israel’s biblical heartland.",
+      "Join as a monthly partner in an international community connecting friends of Israel to families, communities, and projects on the ground - to build presence, life, security, and a future in the Shomron, Israel's biblical heartland.",
     primaryCta: "Join as a monthly partner",
     secondaryCta: "Get more details",
     floatingGoalKicker: "First goal",
@@ -95,7 +97,7 @@ taxShortText:
     heroCardKicker: "Our message",
     heroCardTitle: "The Shomron is not built by one campaign. It is built through steady partnership.",
     heroCardText:
-      "When many partners join through monthly giving — each according to their ability — it creates a steady foundation for long-term building, strengthening, and impact.",
+      "When many partners join through monthly giving - each according to their ability - it creates a steady foundation for long-term building, strengthening, and impact.",
     monthlyFrom: "From",
     monthlyLabel: "monthly partnership",
     whyKicker: "Why this is different",
@@ -115,10 +117,12 @@ taxShortText:
       "Members receive updates, access, experiences, and a sense of belonging to an international community building the Shomron over time.",
     taxShortText:
       "Joining through JGive provides an Israeli Section 46 receipt. U.S. donors will also be able to join through a 501(c)(3) route for a U.S. tax-deductible receipt, subject to eligibility and applicable tax rules.",
+    faqKicker: "FAQ",
+    faqTitle: "Before joining - a few things to know",
     finalKicker: "The next step",
     finalTitle: "Want to join or learn more?",
     finalText:
-      "Leave your details and we will follow up with the right monthly partnership option — in Israel, in the U.S., or through a personal conversation.",
+      "Leave your details and we will follow up with the right monthly partnership option - in Israel, in the U.S., or through a personal conversation.",
     formTitle: "Leave your details",
     formSubtitle: "We will follow up with details about joining SLB as a monthly partner.",
     name: "Full name",
@@ -187,6 +191,53 @@ const plans = {
   ],
 };
 
+const faqs = {
+  he: [
+    {
+      question: "האם זו שותפות חודשית?",
+      answer:
+        "כן. SLB נבנית כקהילה של שותפים קבועים - לא כקמפיין חד-פעמי בעת צרה. המטרה היא ליצור בסיס גדול, יציב ומתמשך, שמאפשר לבנות, לחזק ולהשפיע בשומרון ועל שאר מדינת ישראל לאורך זמן.",
+    },
+    {
+      question: "האם אפשר לקבל קבלה לפי סעיף 46?",
+      answer:
+        "כן. ההצטרפות דרך JGive מאפשרת קבלת קבלה לפי סעיף 46 בישראל, בכפוף לכללי המס. בנוסף, ניתן לקבל קבלה גם בתרומה ישירה לקרן שומרון.",
+    },
+    {
+      question: "האם יש מסלול 501(c)(3) לתורמים בארה״ב?",
+      answer:
+        "כן. קיים מסלול ייעודי לתורמים מארה\"ב, עם אפשרות לקבלת U.S. tax-deductible receipt, בכפוף לזכאות ולכללי המס הרלוונטיים.",
+    },
+    {
+      question: "האם אפשר לשנות או לבטל את השותפות?",
+      answer:
+        "כן. ניתן לעדכן, לשנות או לבטל את השותפות החודשית בהתאם לאפשרויות הסליקה והוראות JGive. אנחנו מאמינים שככל שתכירו מקרוב את העשייה וההשפעה, תרגישו גאווה להיות חלק מהקהילה שמעצבת את עתיד עם ישראל בארץ ישראל.",
+    },
+  ],
+  en: [
+    {
+      question: "Is this a monthly partnership?",
+      answer:
+        "Yes. SLB is built as a community of ongoing partners - not as a one-time campaign in a moment of crisis. The goal is to create a large, stable, and lasting foundation that can build, strengthen, and create impact in the Shomron and across Israel over time.",
+    },
+    {
+      question: "Can I receive an Israeli Section 46 receipt?",
+      answer:
+        "Yes. Joining through JGive allows eligible donors to receive an Israeli Section 46 receipt, subject to applicable tax rules. A receipt may also be available through a direct donation to the Shomron Fund.",
+    },
+    {
+      question: "Is there a 501(c)(3) route for U.S. donors?",
+      answer:
+        "Yes. There is a dedicated route for U.S. donors, with the possibility of receiving a U.S. tax-deductible receipt, subject to eligibility and applicable tax rules.",
+    },
+    {
+      question: "Can I change or cancel my partnership?",
+      answer:
+        "Yes. Monthly partnerships can be updated, changed, or canceled according to the payment platform's available options. We believe that as you get to know the work and its impact, you will feel proud to be part of a community shaping the future of the Jewish people in the Land of Israel.",
+    },
+  ],
+};
+
 const benefits = {
   he: [
     [Video, "עדכוני Zoom חודשיים", "מפגשים חודשיים עם מומחים, אנשי שטח, מנהיגי קהילות ודמויות מהשומרון."],
@@ -200,7 +251,7 @@ const benefits = {
     [Shield, "Field updates", "Videos, photos, and short stories from projects, families, and communities."],
     [Route, "Tours and events", "Invitations to tours, events, and community experiences in the Shomron."],
     [Gift, "Exclusive merchandise", "Unique SLB items according to partnership level."],
-    [FileCheck2, "Shomron Legacy Builder certificate", "A recognition certificate for partners taking part in building the Shomron’s future."],
+    [FileCheck2, "Shomron Legacy Builder certificate", "A recognition certificate for partners taking part in building the Shomron's future."],
   ],
 };
 
@@ -270,6 +321,7 @@ export default function LandingPage() {
   const [formData, setFormData] = useState({ name: "", phone: "", email: "", city: "", country: "" });
   const [formStatus, setFormStatus] = useState("idle");
   const [showGoalCard, setShowGoalCard] = useState(false);
+  const [openFaq, setOpenFaq] = useState(null);
 
   const t = data[language];
   const isHebrew = language === "he";
@@ -280,9 +332,15 @@ export default function LandingPage() {
     : "bg-gradient-to-r from-[#0B1320]/85 via-[#0B1320]/55 to-[#0B1320]/20";
 
   useEffect(() => {
+    const wasClosed = window.localStorage.getItem("slbGoalCardClosed") === "true";
+
+    if (wasClosed) {
+      return undefined;
+    }
+
     const timer = window.setTimeout(() => {
       setShowGoalCard(true);
-    }, 5000);
+    }, 9000);
 
     return () => window.clearTimeout(timer);
   }, []);
@@ -472,6 +530,48 @@ export default function LandingPage() {
       <div className="mx-auto mt-8 max-w-4xl rounded-2xl bg-[#F4EFE6] p-5 text-center text-sm font-medium leading-7 text-[#344D32] ring-1 ring-[#E9D9A8]">
   {t.taxShortText}
 </div>
+
+      <section className="bg-[#FBF8F1] px-6 py-18 md:px-10 md:py-20">
+        <div className="mx-auto max-w-7xl">
+          <Heading kicker={t.faqKicker} title={t.faqTitle} />
+
+          <div className="mt-10 grid gap-4 md:grid-cols-2">
+            {faqs[language].map((item, index) => {
+              const isOpen = openFaq === index;
+
+              return (
+                <div
+                  key={item.question}
+                  className="group rounded-3xl border border-[#E4D8BC] bg-white/90 p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                >
+                  <button
+                    type="button"
+                    onClick={() => setOpenFaq(isOpen ? null : index)}
+                    className={`flex w-full items-center justify-between gap-4 ${isHebrew ? "text-right" : "text-left"}`}
+                  >
+                    <span className="text-lg font-bold text-[#0B1320]">{item.question}</span>
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#E9D9A8]/70 text-xl font-bold text-[#344D32]">
+                      {isOpen ? "-" : "+"}
+                    </span>
+                  </button>
+
+                  <p
+                    className={`mt-4 leading-7 text-slate-600 transition-all duration-300 md:hidden ${
+                      isOpen ? "block" : "hidden"
+                    }`}
+                  >
+                    {item.answer}
+                  </p>
+
+                  <p className="mt-4 hidden leading-7 text-slate-600 opacity-0 transition-opacity duration-300 group-hover:block group-hover:opacity-100 md:block">
+                    {item.answer}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
            
         </div>
       </section>
@@ -512,10 +612,13 @@ export default function LandingPage() {
         </div>
       </section>
       {showGoalCard && (
-        <div className="fixed bottom-4 left-4 right-4 z-50 mx-auto max-w-sm rounded-[1.6rem] border border-[#E9D9A8]/70 bg-[#0B1320]/95 p-4 text-white shadow-2xl shadow-black/25 backdrop-blur md:left-6 md:right-auto md:mx-0 md:max-w-xs">
+        <div className="fixed bottom-3 left-3 right-3 z-50 mx-auto max-w-[19rem] rounded-[1.35rem] border border-[#E9D9A8]/70 bg-[#0B1320]/95 p-3 text-white shadow-2xl shadow-black/25 backdrop-blur md:bottom-4 md:left-6 md:right-auto md:mx-0 md:max-w-xs md:rounded-[1.6rem] md:p-4">
           <button
             type="button"
-            onClick={() => setShowGoalCard(false)}
+            onClick={() => {
+              window.localStorage.setItem("slbGoalCardClosed", "true");
+              setShowGoalCard(false);
+            }}
             className={`absolute top-3 flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-sm text-white/75 transition hover:bg-white/20 hover:text-white ${isHebrew ? "left-4" : "right-4"}`}
             aria-label={isHebrew ? "סגור" : "Close"}
           >
@@ -523,14 +626,14 @@ export default function LandingPage() {
           </button>
           <div className="pr-0 md:pr-2">
             <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#E9D9A8]">{t.floatingGoalKicker}</p>
-            <p className="mt-2 text-2xl font-black tracking-tight text-[#C8A24A]">{t.floatingGoalTitle}</p>
-            <p className="mt-2 text-sm leading-6 text-white/85">{t.floatingGoalText}</p>
-            <p className="mt-2 text-xs font-semibold text-[#E9D9A8]">{t.floatingGoalNote}</p>
+            <p className="mt-1.5 text-xl font-black tracking-tight text-[#C8A24A] md:mt-2 md:text-2xl">{t.floatingGoalTitle}</p>
+            <p className="mt-1.5 text-xs leading-5 text-white/85 md:mt-2 md:text-sm md:leading-6">{t.floatingGoalText}</p>
+            <p className="mt-1.5 text-[11px] font-semibold text-[#E9D9A8] md:mt-2 md:text-xs">{t.floatingGoalNote}</p>
             <a
               href={isHebrew ? ISRAEL_PAYMENT_URL_HE : ISRAEL_PAYMENT_URL_EN}
               target="_blank"
               rel="noreferrer"
-              className="mt-4 inline-flex w-full items-center justify-center rounded-2xl bg-[#C8A24A] px-4 py-3 text-sm font-bold text-[#0B1320] transition hover:bg-[#D8B85F]"
+              className="mt-3 inline-flex w-full items-center justify-center rounded-2xl bg-[#C8A24A] px-4 py-2.5 text-sm font-bold text-[#0B1320] transition hover:bg-[#D8B85F] md:mt-4 md:py-3"
             >
               {t.floatingGoalCta}
             </a>

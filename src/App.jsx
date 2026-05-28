@@ -634,8 +634,8 @@ export default function LandingPage() {
                 <TextInput label={t.email} type="email" value={formData.email} onChange={(value) => updateField("email", value)} required />
               </div>
               <div className="grid gap-4 sm:grid-cols-2">
-                <TextInput label={t.city} value={formData.city} onChange={(value) => updateField("city", value)} />
-                <TextInput label={t.country} value={formData.country} onChange={(value) => updateField("country", value)} />
+                <TextInput label={t.city} value={formData.city} onChange={(value) => updateField("city", value)} required />
+                <TextInput label={t.country} value={formData.country} onChange={(value) => updateField("country", value)} required />
               </div>
               <div className="flex items-center gap-3 pt-2 text-sm text-slate-500">
                 <Mail className="h-4 w-4 text-[#4F6F45]" />

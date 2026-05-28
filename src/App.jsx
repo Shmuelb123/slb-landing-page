@@ -479,11 +479,11 @@ src={HAR_BRACHA_IMAGE}
 
       <section id="contact-form" className="relative overflow-hidden bg-[#0B1320] px-6 py-18 text-white md:px-10 md:py-20">
         <img
-  src={COMMUNITY_IMAGE}
-  alt=""
-  className="absolute inset-0 h-full w-full object-cover opacity-60"
-/>
-        <div className="absolute inset-0 bg-[#0B1320]/68" />
+          src={HERO_IMAGE}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover object-center opacity-70"
+        />
+        <div className="absolute inset-0 bg-[#0B1320]/64" />
         <div className="relative mx-auto max-w-7xl">
           <Heading kicker={t.finalKicker} title={t.finalTitle} text={t.finalText} light />
           <div className="mx-auto mt-10 max-w-2xl rounded-[2rem] bg-white p-6 text-[#0B1320] shadow-2xl md:p-8">

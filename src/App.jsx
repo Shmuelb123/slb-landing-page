@@ -330,10 +330,10 @@ export default function LandingPage() {
     <main dir={t.dir} className={`min-h-screen bg-[#FBF8F1] text-[#0B1320] ${textAlign}`}>
       <section className="relative overflow-hidden bg-[#0B1320] text-white">
         <img
-  src={HERO_IMAGE}
-  alt=""
-  className="absolute inset-0 h-full w-full object-cover opacity-70"
-/>
+          src={CONTACT_IMAGE}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover opacity-70"
+        />
 <div className="absolute inset-0 bg-gradient-to-l from-[#0B1320]/90 via-[#0B1320]/55 to-[#0B1320]/20" />
 <div className="absolute inset-0 bg-gradient-to-t from-[#0B1320]/75 via-transparent to-[#0B1320]/10" />
 

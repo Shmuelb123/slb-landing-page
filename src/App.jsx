@@ -75,6 +75,8 @@ const data = {
       "השאר פרטים ונחזור אליך עם אפשרות ההצטרפות המתאימה לך - בישראל, בארה\"ב או דרך שיחה אישית.",
     formTitle: "השאר פרטים",
     formSubtitle: "נחזור אליך עם פרטים על הצטרפות כשותף קבוע ל-SLB.",
+    extraContactLine: "יש הצעות נוספות? תרגישו חופשי ליצור קשר - שמואל ברזון",
+    extraContactPhone: "+972-52-598-8888",
     name: "שם מלא",
     phone: "טלפון",
     email: "אימייל",
@@ -133,6 +135,8 @@ const data = {
       "Leave your details and we will follow up with the right monthly partnership option - in Israel, in the U.S., or through a personal conversation.",
     formTitle: "Leave your details",
     formSubtitle: "We will follow up with details about joining SLB as a committed partner.",
+    extraContactLine: "Have additional suggestions? Feel free to contact Shmuel Berzon",
+    extraContactPhone: "+972-52-598-8888",
     name: "Full name",
     phone: "Phone",
     email: "Email",
@@ -663,6 +667,18 @@ export default function LandingPage() {
                 {formStatus === "submitting" ? t.submitting : t.primaryCta}
               </Button>
             </form>
+            <div className="mt-6 border-t border-[#E4D8BC] pt-5 text-center text-sm leading-6 text-slate-600">
+              <p>{t.extraContactLine}</p>
+              <a
+                href={isHebrew ? "https://wa.link/gyyuud" : "https://wa.link/ejir2k"}
+                target="_blank"
+                rel="noreferrer"
+                dir="ltr"
+                className="mt-1 inline-block font-bold text-[#344D32] transition hover:text-[#4F6F45]"
+              >
+                {t.extraContactPhone}
+              </a>
+            </div>
           </div>
         </div>
       </section>

@@ -51,6 +51,11 @@ const data = {
     whyText:
       "בכל יום עולים קמפיינים חדשים. רובם מבקשים עזרה לרגע. Shomron Legacy Builders נבנה כדי ליצור חיבור עמוק ומתמשך לשומרון: קהילה של אנשים שבוחרים לקחת חלק באופן קבוע בבניין משפחות, קהילות, ביטחון וחיים.",
     whyTagline: "הרבה שותפים. שליחות אחת. השפעה אמיתית.",
+    whyNowKicker: "למה עכשיו?",
+    whyNowTitle: "השומרון נמצא ברגע של צמיחה, אתגרים והזדמנות היסטורית.",
+    whyNowText:
+      "כדי להקים יישובים, לחזק ביטחון, לבנות מוסדות קהילה ולחבר שותפים מהארץ ומהעולם - צריך בסיס קבוע של אנשים שמאמינים בדרך ובוחרים להיות חלק ממנה עכשיו.",
+    whyNowHighlight: "זה הזמן להפוך אהבה לשומרון וציונות לשותפות שמייצרת מציאות ומשפיעה בשטח.",
     activityKicker: "קצת על הפעילות שלנו",
     activityTitle: "מחברים שותפים לעשייה אמיתית בשטח",
     activityText:
@@ -111,6 +116,11 @@ const data = {
     whyText:
       "New campaigns appear every day. Most ask for help in the moment. Shomron Legacy Builders is built for something deeper: a lasting connection to the Shomron through a community of people who choose to take part consistently in building families, communities, security, and life.",
     whyTagline: "Many partners. One mission. Real impact.",
+    whyNowKicker: "Why now?",
+    whyNowTitle: "The Shomron is at a moment of growth, challenge, and historic opportunity.",
+    whyNowText:
+      "To build new communities, strengthen security, establish community institutions, and connect partners in Israel and around the world, we need a steady foundation of people who believe in this mission and choose to be part of it now.",
+    whyNowHighlight: "This is the time to turn love for the Shomron into partnership that creates reality on the ground.",
     activityKicker: "What we do",
     activityTitle: "Connecting partners to real impact on the ground",
     activityText:
@@ -510,6 +520,21 @@ export default function LandingPage() {
         </div>
       </section>
 
+      <section className="bg-[#FBF8F1] px-6 py-18 md:px-10 md:py-20">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 md:grid-cols-[0.9fr_1.1fr]">
+          <div className="rounded-[2rem] bg-[#0B1320] p-8 text-white shadow-2xl md:p-10">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#E9D9A8]">{t.whyNowKicker}</p>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight md:text-5xl">{t.whyNowTitle}</h2>
+          </div>
+          <div className="rounded-[2rem] border border-[#E4D8BC] bg-white p-7 shadow-sm md:p-9">
+            <p className="text-lg leading-8 text-slate-600">{t.whyNowText}</p>
+            <div className="mt-6 rounded-2xl bg-[#F4EFE6] p-5 text-lg font-bold leading-8 text-[#344D32] ring-1 ring-[#E9D9A8]">
+              {t.whyNowHighlight}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-[#0B1320] px-6 py-18 text-white md:px-10 md:py-20">
         <div className="mx-auto max-w-7xl">
           <Heading kicker={t.activityKicker} title={t.activityTitle} text={t.activityText} light />
@@ -659,7 +684,7 @@ export default function LandingPage() {
               </div>
               <div className="flex items-center gap-3 pt-2 text-sm text-slate-500">
                 <Mail className="h-4 w-4 text-[#4F6F45]" />
-                <span>shmuelberzon@gmail.com</span>
+                <span>shmuelb@shomron.org.il</span>
               </div>
               {formStatus === "success" && <div className="rounded-2xl bg-[#F4EFE6] p-4 text-sm font-semibold text-[#344D32] ring-1 ring-[#E9D9A8]">{t.success}</div>}
               {formStatus === "error" && <div className="rounded-2xl bg-red-50 p-4 text-sm font-semibold text-red-700 ring-1 ring-red-100">{t.error}</div>}

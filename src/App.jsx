@@ -271,7 +271,7 @@ const connectionOptions = {
   en: [
     {
       key: "security",
-      title: "Building new communities",
+      title: "Establishing new communities",
       response: "Partnership that helps establish new communities in the Shomron, strengthen settlement, and turn Zionist vision into reality on the ground.",
     },
     {
@@ -330,7 +330,7 @@ const activities = {
     [HandHeart, "קידום פרויקטים חברתיים", "מקדמים פרויקטים בתחומי קהילה, רווחה, חינוך ועוד - לפי הצרכים שעולים מהשטח."],
   ],
   en: [
-    [Home, "Building new communities", "Supporting the establishment of new communities in the Shomron and strengthening Jewish presence on the ground."],
+    [Home, "Establishing new communities", "Supporting the establishment of new communities in the Shomron and strengthening Jewish presence on the ground."],
     [ShieldCheck, "Strengthening security", "Helping strengthen security in communities and across the region, enabling safer and more stable daily life."],
     [Building2, "Building community institutions", "Helping build synagogues, study halls, mikvaot, and institutions that strengthen community life."],
     [HandHeart, "Advancing social projects", "Advancing projects in community, welfare, education, and additional fields according to needs on the ground."],
@@ -339,24 +339,24 @@ const activities = {
 const plans = {
   he: [
     {
-      name: "Builder",
-      label: "בונה השומרון",
+      name: "ידיד שומרון",
+      label: "ידיד שומרון",
       main: "₪216",
       sub: "כ-$72",
       featured: false,
       perks: ["עדכונים מהשטח", "הזמנה למפגשי Zoom תקופתיים", "תעודת בונה מורשת השומרון דיגיטלית"],
     },
     {
-      name: "Community Partner",
-      label: "שותף קהילה",
+      name: "שותף שומרון",
+      label: "שותף שומרון",
       main: "₪270",
       sub: "כ-$90",
       featured: true,
       perks: ["כל הטבות Builder", "עדכונים מורחבים מהשטח", "קדימות בהרשמה לסיורי SLB", "הזמנות לאירועים נבחרים בשומרון"],
     },
     {
-      name: "Legacy Partner",
-      label: "שותף מורשת",
+      name: "בונה שומרון",
+      label: "בונה שומרון",
       main: "₪540",
       sub: "כ-$180",
       featured: false,
@@ -365,24 +365,24 @@ const plans = {
   ],
   en: [
     {
-      name: "Builder",
-      label: "Shomron Builder",
+      name: "Shomron Legacy Friend",
+      label: "Shomron Legacy Friend",
       main: "$72",
       sub: "approx. ₪216",
       featured: false,
       perks: ["Field updates", "Invitation to periodic Zoom briefings", "Digital Shomron Legacy Builder certificate"],
     },
     {
-      name: "Community Partner",
-      label: "Community Partner",
+      name: "Shomron Legacy Partner",
+      label: "Shomron Legacy Partner",
       main: "$90",
       sub: "approx. ₪270",
       featured: true,
       perks: ["All Builder benefits", "Expanded field updates", "Priority registration for SLB tours", "Invitations to selected events in the Shomron"],
     },
     {
-      name: "Legacy Partner",
-      label: "Legacy Partner",
+      name: "Shomron Legacy Builder",
+      label: "Shomron Legacy Builder",
       main: "$180",
       sub: "approx. ₪540",
       featured: false,
@@ -923,10 +923,6 @@ export default function LandingPage() {
                 <TextInput label={t.city} value={formData.city} onChange={(value) => updateField("city", value)} required />
                 <TextInput label={t.country} value={formData.country} onChange={(value) => updateField("country", value)} required />
               </div>
-              <div className="flex items-center gap-3 pt-2 text-sm text-slate-500">
-                <Mail className="h-4 w-4 text-[#4F6F45]" />
-                <span>shmuelb@shomron.org.il</span>
-              </div>
               {formStatus === "success" && <div className="rounded-2xl bg-[#F4EFE6] p-4 text-sm font-semibold text-[#344D32] ring-1 ring-[#E9D9A8]">{t.success}</div>}
               {formStatus === "error" && <div className="rounded-2xl bg-red-50 p-4 text-sm font-semibold text-red-700 ring-1 ring-red-100">{t.error}</div>}
               <Button type="submit" variant="green" disabled={formStatus === "submitting"}>
@@ -935,15 +931,21 @@ export default function LandingPage() {
             </form>
             <div className="mt-6 border-t border-[#E4D8BC] pt-5 text-center text-sm leading-6 text-slate-600">
               <p>{t.extraContactLine}</p>
-              <a
-                href={isHebrew ? "https://wa.link/gyyuud" : "https://wa.link/ejir2k"}
-                target="_blank"
-                rel="noreferrer"
-                dir="ltr"
-                className="mt-1 inline-block font-bold text-[#344D32] transition hover:text-[#4F6F45]"
-              >
-                {t.extraContactPhone}
-              </a>
+              <div className="mt-2 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 font-bold text-[#344D32]">
+                <a
+                  href={isHebrew ? "https://wa.link/gyyuud" : "https://wa.link/ejir2k"}
+                  target="_blank"
+                  rel="noreferrer"
+                  dir="ltr"
+                  className="transition hover:text-[#4F6F45]"
+                >
+                  {t.extraContactPhone}
+                </a>
+                <span className="text-[#C8A24A]">|</span>
+                <a href="mailto:shmuelb@shomron.org.il" className="transition hover:text-[#4F6F45]">
+                  shmuelb@shomron.org.il
+                </a>
+              </div>
             </div>
           </div>
         </div>

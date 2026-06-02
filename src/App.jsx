@@ -12,27 +12,18 @@ import {
   Route,
   Gift,
   FileCheck2,
-  Home,
-  ShieldCheck,
-  UsersRound,
-  Landmark,
-  BookOpen,
-  Building2,
-  MapPin,
-  HandHeart,
 } from "lucide-react";
 
 const GOOGLE_FORM_ACTION_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLSdRHet2DIixzCF_7nstTwvkdoc1z6xEQ7PZy4VWk0RrpSJlNg/formResponse";
 const ISRAEL_PAYMENT_URL_HE = "https://www.jgive.com/new/he/ils/charity-organizations/4717";
 const ISRAEL_PAYMENT_URL_EN = "https://www.jgive.com/new/en/ils/charity-organizations/4717";
+const USA_PAYMENT_URL = "PASTE_US_501C3_TAX_DEDUCTIBLE_PAYMENT_LINK_HERE";
 
 const HERO_IMAGE = "/images/shomron-hero.jpeg";
 const WHY_IMAGE = "/images/shomron-village-sunset.jpeg";
 const BENEFITS_IMAGE = "/images/har-bracha-view.jpg";
 const CONTACT_IMAGE = "/images/contact-background.jpeg";
-
-const ENABLE_PILOT_FEATURES = false;
 
 const data = {
   he: {
@@ -61,27 +52,10 @@ const data = {
       "בכל יום עולים קמפיינים חדשים. רובם מבקשים עזרה לרגע. Shomron Legacy Builders נבנה כדי ליצור חיבור עמוק ומתמשך לשומרון: קהילה של אנשים שבוחרים לקחת חלק באופן קבוע בבניין משפחות, קהילות, ביטחון וחיים.",
     whyTagline: "הרבה שותפים. שליחות אחת. השפעה אמיתית.",
     whyNowKicker: "למה עכשיו?",
-    whyNowTitle: "השומרון נמצא ברגע של הזדמנות היסטורית.",
+    whyNowTitle: "השומרון נמצא ברגע של צמיחה, אתגרים והזדמנות היסטורית.",
+    whyNowText:
+      "כדי להקים יישובים, לחזק ביטחון, לבנות מוסדות קהילה ולחבר שותפים מהארץ ומהעולם - צריך בסיס קבוע של אנשים שמאמינים בדרך ובוחרים להיות חלק ממנה עכשיו.",
     whyNowHighlight: "זה הזמן להפוך אהבה לשומרון וציונות לשותפות שמייצרת מציאות ומשפיעה בשטח.",
-    foundingKicker: "היעד הראשון",
-    foundingTitle: "250 שותפים מייסדים",
-    foundingText:
-      "אנחנו בונים את הגרעין הראשון של Shomron Legacy Builders - קהילה של שותפים שמבינים שהשומרון לא נבנה ביום אחד, אלא באמצעות בסיס יציב של אנשים שבוחרים להיות חלק.",
-    foundingNote: "כל שותף מקרב אותנו ליעד.",
-    personalKicker: "מילה אישית",
-    personalTitle: "מהשומרון - אליכם",
-    personalText:
-      "אני פוגש אנשים רבים שאוהבים את ישראל ואת השומרון, אבל מחפשים דרך אמיתית להיות חלק. SLB נועדה בדיוק בשביל זה - להפוך אהבה, ציונות וחיבור לשותפות קבועה שמורגשת בשטח.",
-    personalSignature: "שמואל ברזון | Shomron Legacy Builders | קרן שומרון",
-    quizKicker: "בחרו את החיבור שלכם",
-    quizTitle: "מה הכי מחבר אתכם לשומרון - לב הארץ?",
-    quizText: "בחרו את התחום שהכי מדבר אליכם, ונראה איך השותפות שלכם יכולה להתחבר לעשייה אמיתית בשטח.",
-    impactKicker: "מה השותפות שלך יכולה לאפשר",
-    impactTitle: "הופכים שותפות לעשייה מוחשית",
-    impactText: "השותפות ב-SLB יכולה להשתלב במגוון תחומי עשייה לפי הצרכים שעולים מהשטח.",
-    howKicker: "איך זה עובד?",
-    howTitle: "ארבעה צעדים פשוטים להצטרפות",
-    floatingSecondaryCta: "רוצה לדבר קודם? שלח הודעה לשמואל",
     activityKicker: "קצת על הפעילות שלנו",
     activityTitle: "מחברים שותפים לעשייה אמיתית בשטח",
     activityText:
@@ -128,7 +102,7 @@ const data = {
     secondaryCta: "Get more details",
     floatingGoalKicker: "First goal",
     floatingGoalTitle: "250 founding partners!",
-    floatingGoalText: "Be among the first to join the community building the Shomron's future.",
+    floatingGoalText: "Be among the first to join the community building the Shomron’s future.",
     floatingGoalNote: "Every partner brings us closer.",
     floatingGoalCta: "Join now",
     heroCardKicker: "Our message",
@@ -143,28 +117,10 @@ const data = {
       "New campaigns appear every day. Most ask for help in the moment. Shomron Legacy Builders is built for something deeper: a lasting connection to the Shomron through a community of people who choose to take part consistently in building families, communities, security, and life.",
     whyTagline: "Many partners. One mission. Real impact.",
     whyNowKicker: "Why now?",
-    whyNowTitle: "The Shomron is at a moment of historic opportunity.",
-    whyNowHighlight: "This is the time to turn love for the Shomron and Zionism into partnership that creates reality and impact on the ground.",
-
-    foundingKicker: "First goal",
-    foundingTitle: "250 founding partners",
-    foundingText:
-      "We are building the first circle of Shomron Legacy Builders - a community of partners who understand that the Shomron is not built in a single day, but through a stable foundation of people who choose to be part of it.",
-    foundingNote: "Every partner brings us closer.",
-    personalKicker: "A personal note",
-    personalTitle: "From the Shomron - to you",
-    personalText:
-      "I meet many people who love Israel and the Shomron, but are looking for a real way to be part of it. SLB was created for exactly that - to turn love, Zionism, and connection into steady partnership that is felt on the ground.",
-    personalSignature: "Shmuel Berzon | Shomron Legacy Builders | Shomron Fund",
-    quizKicker: "Choose your connection",
-    quizTitle: "What connects you most to the Shomron - the heartland of Israel?",
-    quizText: "Choose one area, and we will show how your partnership can connect to it.",
-    impactKicker: "What your partnership can make possible",
-    impactTitle: "Turning partnership into tangible action",
-    impactText: "Partnership in SLB can support a range of efforts according to real needs on the ground.",
-    howKicker: "How it works",
-    howTitle: "Four simple steps to join",
-    floatingSecondaryCta: "Want to talk first? Message Shmuel",
+    whyNowTitle: "The Shomron is at a moment of growth, challenge, and historic opportunity.",
+    whyNowText:
+      "To build new communities, strengthen security, establish community institutions, and connect partners in Israel and around the world, we need a steady foundation of people who believe in this mission and choose to be part of it now.",
+    whyNowHighlight: "This is the time to turn love for the Shomron into partnership that creates reality on the ground.",
     activityKicker: "What we do",
     activityTitle: "Connecting partners to real impact on the ground",
     activityText:
@@ -186,7 +142,7 @@ const data = {
     finalKicker: "The next step",
     finalTitle: "Want to join or learn more?",
     finalText:
-      "Leave your details and we will follow up with the right partnership option - in Israel, in the U.S., or through a personal conversation.",
+      "Leave your details and we will follow up with the right monthly partnership option - in Israel, in the U.S., or through a personal conversation.",
     formTitle: "Leave your details",
     formSubtitle: "We will follow up with details about joining SLB as a committed partner.",
     extraContactLine: "Have additional suggestions? Feel free to contact Shmuel Berzon",
@@ -202,138 +158,18 @@ const data = {
   },
 };
 
-const whyNowMoments = {
-  he: [
-    {
-      year: "1948",
-      title: "הזדמנות להקים מדינה",
-      text: "ברגע שבו נפתחה הדלת ההיסטורית, עם ישראל בחר לבנות, להתיישב ולהקים מדינה בארץ ישראל.",
-      featured: false,
-    },
-    {
-      year: "1967",
-      title: "חזרה לחבלי הלב של הארץ",
-      text: "אחרי 1967 נפתחה מחדש האפשרות להתחבר לירושלים, ליהודה, לשומרון ולמרחבים שבהם נוצר הסיפור של עם ישראל.",
-      featured: false,
-    },
-    {
-      year: "2026",
-      title: "עוד הזדמנות היסטורית ליישב",
-      text: "גם עכשיו נפתחת הזדמנות לחזק, לבנות וליישב את השומרון - לא בסיסמאות, אלא בעשייה קבועה בשטח ובשותפות של אנשים שמאמינים בדרך.",
-      featured: true,
-    },
-  ],
-  en: [
-    {
-      year: "1948",
-      title: "An opportunity to build a state",
-      text: "When the historic door opened, the Jewish people chose to build, settle, and establish a state in the Land of Israel.",
-      featured: false,
-    },
-    {
-      year: "1967",
-      title: "A return to the heartland",
-      text: "After 1967, the door reopened to Jerusalem, Judea, Samaria, and the places where the story of the Jewish people was formed.",
-      featured: false,
-    },
-    {
-      year: "2026",
-      title: "Another historic opportunity to build",
-      text: "Now, another opportunity is opening to strengthen, build, and settle the Shomron - not with slogans, but through steady action on the ground and partners who believe in the mission.",
-      featured: true,
-    },
-  ],
-};
-
-const connectionOptions = {
-  he: [
-    {
-      key: "security",
-      title: "הקמת יישובים חדשים",
-      response: "שותפות שמסייעת להקים יישובים חדשים בשומרון, לחזק את ההתיישבות ולהפוך חזון ציוני למציאות בשטח.",
-    },
-    {
-      key: "community",
-      title: "ביטחון ביישובים ובכבישי השומרון",
-      response: "שותפות שמסייעת לחזק את הביטחון ביישובים, בצירים ובמרחב השומרון - כדי לאפשר חיים יציבים ובטוחים יותר.",
-    },
-    {
-      key: "heritage",
-      title: "חוסן קהילתי וצרכי קהילה",
-      response: "שותפות שמסייעת לחזק משפחות, מוסדות קהילה, רווחה, חינוך וצרכים שעולים מתוך החיים בשטח.",
-    },
-    {
-      key: "field",
-      title: "תנ\"ך, היסטוריה, מורשת ונופי השומרון",
-      response: "שותפות שמחברת לשורשים, לסיפורי התנ\"ך, להיסטוריה, למורשת ולנופים של השומרון - דרך עשייה חיה בלב הארץ.",
-    },
-  ],
-  en: [
-    {
-      key: "security",
-      title: "Building new communities",
-      response: "Partnership that helps establish new communities in the Shomron, strengthen settlement, and turn Zionist vision into reality on the ground.",
-    },
-    {
-      key: "community",
-      title: "Security in Shomron communities and roads",
-      response: "Partnership that helps strengthen security in communities, roads, and the broader Shomron region - enabling safer and more stable life.",
-    },
-    {
-      key: "heritage",
-      title: "Community resilience and local needs",
-      response: "Partnership that helps strengthen families, community institutions, welfare, education, and needs that rise from daily life on the ground.",
-    },
-    {
-      key: "field",
-      title: "Bible, history, heritage, and Shomron landscapes",
-      response: "Partnership that connects to the roots, biblical stories, history, heritage, and landscapes of the Shomron - through living action in the heartland of Israel.",
-    },
-  ],
-};
-
-const impactItems = {
-  he: [
-    [Home, "חיזוק נקודת התיישבות", "שותפות שמסייעת לבנות נוכחות יהודית יציבה בשטח."],
-    [ShieldCheck, "ציוד וביטחון ליישובים", "סיוע לצרכים שמחזקים ביטחון וחיי יום-יום בקהילות."],
-    [Building2, "בית כנסת, בית מדרש או מקווה", "בניית מוסדות שמחזקים את הזהות, התורה והקהילה."],
-    [HandHeart, "פרויקטים של רווחה וקהילה", "סיוע למשפחות, ילדים ויוזמות חברתיות לפי הצרכים בשטח."],
-  ],
-  en: [
-    [Home, "Strengthening a new community", "Partnership that helps build stable Jewish presence on the ground."],
-    [ShieldCheck, "Security needs for communities", "Support for needs that strengthen security and daily life in local communities."],
-    [Building2, "Synagogue, study hall, or mikveh", "Building institutions that strengthen identity, Torah, and community life."],
-    [HandHeart, "Welfare and community projects", "Support for families, children, and social initiatives according to real needs on the ground."],
-  ],
-};
-
-const howItWorksSteps = {
-  he: [
-    "בוחרים רמת שותפות שמתאימה לכם",
-    "מצטרפים בצורה מאובטחת דרך JGive",
-    "מקבלים עדכונים, סיפורים וחיבור חי לעשייה",
-    "הופכים לחלק מקהילת SLB שבונה לאורך זמן",
-  ],
-  en: [
-    "Choose the partnership level that fits you",
-    "Join securely through JGive",
-    "Receive updates, stories, and a living connection to the work",
-    "Become part of the SLB community building over time",
-  ],
-};
-
 const activities = {
   he: [
-    [Home, "הקמת יישובים חדשים", "מסייעים בהקמת יישובים חדשים בשומרון ובחיזוק ההתיישבות בשטח."],
-    [ShieldCheck, "חיזוק הביטחון", "מחזקים את הביטחון ביישובים ובאזור כדי לאפשר חיים יציבים ובטוחים יותר."],
-    [Building2, "בניית מוסדות קהילה", "עוזרים בבניית בתי כנסת, בתי מדרש, מקוואות ומוסדות שמחזקים את חיי הקהילה."],
-    [HandHeart, "קידום פרויקטים חברתיים", "מקדמים פרויקטים בתחומי קהילה, רווחה, חינוך ועוד - לפי הצרכים שעולים מהשטח."],
+    [Route, "הקמת יישובים חדשים", "מסייעים בהקמת יישובים חדשים בשומרון ובחיזוק ההתיישבות בשטח."],
+    [Shield, "חיזוק הביטחון", "מחזקים את הביטחון ביישובים ובאזור כדי לאפשר חיים יציבים ובטוחים יותר."],
+    [HeartHandshake, "בניית מוסדות קהילה", "עוזרים בבניית בתי כנסת, בתי מדרש, מקוואות ומוסדות שמחזקים את חיי הקהילה."],
+    [Gift, "קידום פרויקטים חברתיים", "מקדמים פרויקטים בתחומי קהילה, רווחה, חינוך ועוד - לפי הצרכים שעולים מהשטח."],
   ],
   en: [
-    [Home, "Building new communities", "Supporting the establishment of new communities in the Shomron and strengthening Jewish presence on the ground."],
-    [ShieldCheck, "Strengthening security", "Helping strengthen security in communities and across the region, enabling safer and more stable daily life."],
-    [Building2, "Building community institutions", "Helping build synagogues, study halls, mikvaot, and institutions that strengthen community life."],
-    [HandHeart, "Advancing social projects", "Advancing projects in community, welfare, education, and additional fields according to needs on the ground."],
+    [Route, "Building new communities", "Supporting the establishment of new communities in the Shomron and strengthening Jewish presence on the ground."],
+    [Shield, "Strengthening security", "Helping strengthen security in communities and across the region, enabling safer and more stable daily life."],
+    [HeartHandshake, "Building community institutions", "Helping build synagogues, study halls, mikvaot, and institutions that strengthen community life."],
+    [Gift, "Advancing social projects", "Advancing projects in community, welfare, education, and additional fields according to needs on the ground."],
   ],
 };
 const plans = {
@@ -341,7 +177,7 @@ const plans = {
     {
       name: "Builder",
       label: "בונה השומרון",
-      main: "כ-₪200",
+      main: "כ־₪200",
       sub: "$72",
       featured: false,
       perks: ["עדכונים מהשטח", "הזמנה למפגשי Zoom תקופתיים", "תעודת בונה מורשת השומרון דיגיטלית"],
@@ -349,7 +185,7 @@ const plans = {
     {
       name: "Community Partner",
       label: "שותף קהילה",
-      main: "כ-₪250",
+      main: "כ־₪250",
       sub: "$90",
       featured: true,
       perks: ["כל הטבות Builder", "עדכונים מורחבים מהשטח", "קדימות בהרשמה לסיורי SLB", "הזמנות לאירועים נבחרים בשומרון"],
@@ -357,7 +193,7 @@ const plans = {
     {
       name: "Legacy Partner",
       label: "שותף מורשת",
-      main: "כ-₪500",
+      main: "כ־₪500",
       sub: "$180",
       featured: false,
       perks: ["כל הטבות Community Partner", "מרצ׳נדייז אקסקלוסיבי", "הזמנה לסיור VIP בשומרון", "תעודת הוקרה מודפסת", "אפשרות לשיחת עדכון אישית תקופתית"],
@@ -441,14 +277,14 @@ const faqs = {
 const benefits = {
   he: [
     [Video, "מפגשי Zoom תקופתיים", "מפגשים תקופתיים עם מומחים, אנשי שטח, מנהיגי קהילות ודמויות מהשומרון."],
-    [MapPin, "עדכונים מהשטח", "סרטונים, תמונות וסיפורים קצרים מהפרויקטים, המשפחות והיישובים."],
+    [Shield, "עדכונים מהשטח", "סרטונים, תמונות וסיפורים קצרים מהפרויקטים, המשפחות והיישובים."],
     [Route, "סיורים ואירועים", "הזמנות לסיורים, אירועים וחוויות קהילתיות בשומרון."],
     [Gift, "מרצ׳נדייז אקסקלוסיבי", "פריטי SLB ייחודיים לפי רמת השותפות."],
     [FileCheck2, "תעודת בונה מורשת השומרון", "תעודת הוקרה לשותפים שלוקחים חלק בבניין העתיד של השומרון."],
   ],
   en: [
     [Video, "Periodic Zoom briefings", "Periodic sessions with experts, field leaders, community representatives, and voices from the Shomron."],
-    [MapPin, "Field updates", "Videos, photos, and short stories from projects, families, and communities."],
+    [Shield, "Field updates", "Videos, photos, and short stories from projects, families, and communities."],
     [Route, "Tours and events", "Invitations to tours, events, and community experiences in the Shomron."],
     [Gift, "Exclusive merchandise", "Unique SLB items according to partnership level."],
     [FileCheck2, "Shomron Legacy Builder certificate", "A recognition certificate for partners taking part in building the Shomron's future."],
@@ -529,7 +365,6 @@ export default function LandingPage() {
   const [formStatus, setFormStatus] = useState("idle");
   const [showGoalCard, setShowGoalCard] = useState(false);
   const [openFaq, setOpenFaq] = useState(null);
-  const [selectedConnection, setSelectedConnection] = useState(null);
 
   const t = data[language];
   const isHebrew = language === "he";
@@ -656,7 +491,7 @@ export default function LandingPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="rounded-3xl bg-[#FBF8F1] p-5 text-[#0B1320]">
                   <p className="text-sm font-semibold text-slate-600">{t.monthlyFrom}</p>
-                  <p className="text-3xl font-bold">{isHebrew ? "כ-₪200" : "$72+"}</p>
+                  <p className="text-3xl font-bold">{isHebrew ? "כ־₪200" : "$72+"}</p>
                   <p className="mt-1 text-sm font-semibold text-slate-800">{isHebrew ? "$72+" : "approx. ₪200"}</p>
                 </div>
                 <div className="rounded-3xl bg-[#C8A24A] p-5 text-[#0B1320]">
@@ -686,135 +521,20 @@ export default function LandingPage() {
       </section>
 
       <section className="bg-[#FBF8F1] px-6 py-18 md:px-10 md:py-20">
-        <div className="mx-auto max-w-7xl">
-          <Heading kicker={t.whyNowKicker} title={t.whyNowTitle} />
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {whyNowMoments[language].map((moment) => (
-              <div
-                key={moment.year}
-                className={`rounded-[2rem] p-7 shadow-xl transition hover:-translate-y-1 ${
-                  moment.featured
-                    ? "border-2 border-[#C8A24A] bg-[#0B1320] text-white"
-                    : "border border-[#E4D8BC] bg-white text-[#0B1320]"
-                }`}
-              >
-                <p className={`text-5xl font-black ${moment.featured ? "text-[#C8A24A]" : "text-[#4F6F45]"}`}>{moment.year}</p>
-                <h3 className="mt-5 text-2xl font-bold">{moment.title}</h3>
-                <p className={`mt-4 leading-7 ${moment.featured ? "text-slate-200" : "text-slate-600"}`}>{moment.text}</p>
-              </div>
-            ))}
+        <div className="mx-auto grid max-w-7xl items-center gap-8 md:grid-cols-[0.9fr_1.1fr]">
+          <div className="rounded-[2rem] bg-[#0B1320] p-8 text-white shadow-2xl md:p-10">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#E9D9A8]">{t.whyNowKicker}</p>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight md:text-5xl">{t.whyNowTitle}</h2>
           </div>
-          <div className="mx-auto mt-8 max-w-4xl rounded-2xl bg-[#F4EFE6] p-5 text-center text-lg font-bold leading-8 text-[#344D32] ring-1 ring-[#E9D9A8]">
-            {t.whyNowHighlight}
+          <div className="rounded-[2rem] border border-[#E4D8BC] bg-white p-7 shadow-sm md:p-9">
+            <p className="text-lg leading-8 text-slate-600">{t.whyNowText}</p>
+            <div className="mt-6 rounded-2xl bg-[#F4EFE6] p-5 text-lg font-bold leading-8 text-[#344D32] ring-1 ring-[#E9D9A8]">
+              {t.whyNowHighlight}
+            </div>
           </div>
         </div>
       </section>
 
-      {ENABLE_PILOT_FEATURES && (
-        <>
-          <section className="bg-[#0B1320] px-6 py-18 text-white md:px-10 md:py-20">
-            <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-[0.85fr_1.15fr]">
-              <div className="rounded-[2rem] border border-[#E9D9A8]/30 bg-white/10 p-8 shadow-2xl backdrop-blur md:p-10">
-                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#E9D9A8]">{t.foundingKicker}</p>
-                <h2 className="mt-4 text-4xl font-black text-[#C8A24A] md:text-6xl">{t.foundingTitle}</h2>
-                <div className="mt-8 h-4 overflow-hidden rounded-full bg-white/15">
-                  <div className="h-full w-[18%] rounded-full bg-[#C8A24A]" />
-                </div>
-                <p className="mt-3 text-sm font-semibold text-[#E9D9A8]">{t.foundingNote}</p>
-              </div>
-              <div className="flex items-center rounded-[2rem] bg-white p-8 text-[#0B1320] shadow-2xl md:p-10">
-                <p className="text-lg leading-8 text-slate-700">{t.foundingText}</p>
-              </div>
-            </div>
-          </section>
-
-          <section className="bg-[#FBF8F1] px-6 py-18 md:px-10 md:py-20">
-            <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-[1fr_0.85fr]">
-              <div className="rounded-[2rem] border border-[#E4D8BC] bg-white p-8 shadow-sm md:p-10">
-                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#4F6F45]">{t.personalKicker}</p>
-                <h2 className="mt-4 text-3xl font-bold tracking-tight text-[#0B1320] md:text-5xl">{t.personalTitle}</h2>
-                <p className="mt-6 text-lg leading-8 text-slate-600">{t.personalText}</p>
-                <p className="mt-6 font-bold text-[#344D32]">{t.personalSignature}</p>
-              </div>
-              <div className="rounded-[2rem] bg-[#F4EFE6] p-8 shadow-sm ring-1 ring-[#E9D9A8] md:p-10">
-                <p className="text-6xl font-black text-[#C8A24A]">SLB</p>
-                <p className="mt-4 text-xl font-bold text-[#0B1320]">{isHebrew ? "הזמנה אישית להיות חלק מהשטח" : "A personal invitation to be part of the work"}</p>
-              </div>
-            </div>
-          </section>
-
-          <section className="bg-white px-6 py-18 md:px-10 md:py-20">
-            <div className="mx-auto max-w-7xl">
-              <Heading kicker={t.quizKicker} title={t.quizTitle} text={t.quizText} />
-              <div className="mt-10 grid gap-4 md:grid-cols-4">
-                {connectionOptions[language].map((option) => {
-                  const isSelected = selectedConnection === option.key;
-                  const Icon =
-                    option.key === "security"
-                      ? Home
-                      : option.key === "community"
-                        ? ShieldCheck
-                        : option.key === "heritage"
-                          ? UsersRound
-                          : BookOpen;
-
-                  return (
-                    <button
-                      key={option.key}
-                      type="button"
-                      onClick={() => setSelectedConnection(option.key)}
-                      className={`rounded-3xl border p-5 text-start transition hover:-translate-y-1 hover:shadow-xl ${isSelected ? "border-[#C8A24A] bg-[#F4EFE6] shadow-lg" : "border-[#E4D8BC] bg-white"}`}
-                    >
-                      <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-[#E9D9A8]/70 text-[#344D32]">
-                        <Icon className="h-5 w-5" />
-                      </div>
-                      <span className="text-lg font-bold text-[#0B1320]">{option.title}</span>
-                    </button>
-                  );
-                })}
-              </div>
-              {selectedConnection && (
-                <div className="mx-auto mt-8 max-w-3xl rounded-3xl bg-[#0B1320] p-6 text-center text-lg font-semibold leading-8 text-white shadow-xl">
-                  {connectionOptions[language].find((option) => option.key === selectedConnection)?.response}
-                </div>
-              )}
-            </div>
-          </section>
-
-          <section className="bg-[#FBF8F1] px-6 py-18 md:px-10 md:py-20">
-            <div className="mx-auto max-w-7xl">
-              <Heading kicker={t.impactKicker} title={t.impactTitle} text={t.impactText} />
-              <div className="mt-10 grid gap-5 md:grid-cols-4">
-                {impactItems[language].map(([Icon, title, text]) => (
-                  <Card key={title} className="p-6 transition hover:-translate-y-1 hover:shadow-xl">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#E9D9A8]/70 text-[#344D32]">
-                      <Icon className="h-6 w-6" />
-                    </div>
-                    <h3 className="mt-5 text-xl font-bold text-[#0B1320]">{title}</h3>
-                    <p className="mt-3 text-sm leading-7 text-slate-600">{text}</p>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          <section className="bg-white px-6 py-18 md:px-10 md:py-20">
-            <div className="mx-auto max-w-7xl">
-              <Heading kicker={t.howKicker} title={t.howTitle} />
-              <div className="mt-10 grid gap-4 md:grid-cols-4">
-                {howItWorksSteps[language].map((step, index) => (
-                  <div key={step} className="rounded-3xl border border-[#E4D8BC] bg-[#FBF8F1] p-6 shadow-sm">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#C8A24A] text-lg font-black text-[#0B1320]">
-                      {index + 1}
-                    </div>
-                    <p className="mt-5 text-lg font-bold leading-7 text-[#0B1320]">{step}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        </>
-      )}
       <section className="bg-[#0B1320] px-6 py-18 text-white md:px-10 md:py-20">
         <div className="mx-auto max-w-7xl">
           <Heading kicker={t.activityKicker} title={t.activityTitle} text={t.activityText} light />
@@ -1013,16 +733,6 @@ export default function LandingPage() {
             >
               {t.floatingGoalCta}
             </a>
-            {ENABLE_PILOT_FEATURES && (
-              <a
-                href={isHebrew ? "https://wa.link/gyyuud" : "https://wa.link/ejir2k"}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-2 block text-center text-[11px] font-semibold text-white/80 underline-offset-4 hover:text-white hover:underline"
-              >
-                {t.floatingSecondaryCta}
-              </a>
-            )}
           </div>
         </div>
       )}

@@ -41,9 +41,9 @@ const data = {
     badge: "Shomron Legacy Builders - קהילת שותפים שבונה את עתיד השומרון",
     heroTitle: "הזדמנות היסטורית להיות שותפים בבניין השומרון.",
     heroText:
-      "הצטרפו כשותפים קבועים לקהילה בינלאומית שמחברת ידידי ישראל למשפחות, יישובים ופרויקטים בשטח - כדי לבנות נוכחות, חיים, ביטחון ועתיד בלב הארץ.",
-    primaryCta: "הצטרף כשותף מייסד",
-    secondaryCta: "קבל פרטים נוספים",
+      "הצטרפו לקהילה של אנשים מהארץ ומהעולם שמרגישים חיבור לשומרון ורוצים לקחת חלק בעשייה אמיתית - משפחות, יישובים, ביטחון, קהילה ועתיד בלב הארץ.",
+    primaryCta: "להצטרפות לבוני שומרון",
+    secondaryCta: "רוצה לשמוע עוד?",
     floatingGoalKicker: "יעד ראשוני",
     floatingGoalTitle: "250 שותפים ראשונים!",
     floatingGoalText: "היו מהראשונים להצטרף לקהילה שבונה את עתיד השומרון.",
@@ -52,7 +52,7 @@ const data = {
     heroCardKicker: "למה זה שונה?",
     heroCardTitle: "לא עוד קמפיין חד-פעמי. קהילה של שותפים קבועים.",
     heroCardText:
-      "בכל יום עולים קמפיינים חדשים. רובם מבקשים עזרה לרגע. Shomron Legacy Builders נבנה כדי ליצור חיבור עמוק ומתמשך לשומרון: קהילה של אנשים שבוחרים לקחת חלק באופן קבוע בבניין משפחות, קהילות, ביטחון וחיים.",
+      "יש הרבה קמפיינים שמבקשים עזרה לרגע מסוים. Shomron Legacy Builders נועד למשהו אחר - לבנות קהילה קבועה של אנשים שמחוברים לשומרון ורוצים להיות חלק מבניין החיים, הביטחון והקהילות כאן לאורך זמן.",
     monthlyFrom: "החל מ-",
     monthlyLabel: "שותפות קבועה",
     whyKicker: "למה זה שונה?",
@@ -120,12 +120,12 @@ const data = {
   en: {
     dir: "ltr",
     switchLabel: "עברית",
-    badge: "Shomron Legacy Builders - a community of partners building Shomron's future",
+    badge: "Shomron Legacy Builders - a community of partners building Shomron\'s future",
     heroTitle: "A historic opportunity to become partners in building the Shomron.",
     heroText:
-      "Join as a committed partner in an international community connecting friends of Israel to families, communities, and projects on the ground - to build presence, life, security, and a future in the Shomron, Israel's biblical heartland.",
-    primaryCta: "Become a founding partner",
-    secondaryCta: "Get more details",
+      "Join a community of people in Israel and around the world who feel connected to the Shomron and want to take part in real work on the ground - families, communities, security, and a future in Israel's biblical heartland.",
+    primaryCta: "Join Shomron Legacy Builders",
+    secondaryCta: "I want to hear more",
     floatingGoalKicker: "First goal",
     floatingGoalTitle: "250 founding partners!",
     floatingGoalText: "Be among the first to join the community building the Shomron's future.",
@@ -134,7 +134,7 @@ const data = {
     heroCardKicker: "Why this is different",
     heroCardTitle: "Not another one-time campaign. A community of committed partners.",
     heroCardText:
-      "New campaigns appear every day. Most ask for help in the moment. Shomron Legacy Builders is built for something deeper: a lasting connection to the Shomron through a community of people who choose to take part consistently in building families, communities, security, and life.",
+      "Many campaigns ask for help in a specific moment. Shomron Legacy Builders was created for something different - a steady community of people who care about the Shomron and want to help build life, security, and community here over time.",
     monthlyFrom: "From",
     monthlyLabel: "steady partnership",
     whyKicker: "Why this is different",

@@ -106,6 +106,7 @@ const data = {
       "השאר פרטים ונחזור אליך עם אפשרות ההצטרפות המתאימה לך - בישראל, בארה\"ב או דרך שיחה אישית.",
     formTitle: "השאר פרטים",
     formSubtitle: "נחזור אליך עם פרטים על הצטרפות כשותף קבוע ל-SLB.",
+    formCta: "שליחת פרטים",
     extraContactLine: "יש הצעות נוספות? תרגישו חופשי ליצור קשר - שמואל ברזון",
     extraContactPhone: "+972-52-598-8888",
     name: "שם מלא",
@@ -116,6 +117,13 @@ const data = {
     submitting: "שולח...",
     success: "תודה! הפרטים נשלחו בהצלחה. נחזור אליך בקרוב.",
     error: "משהו השתבש בשליחה. נסה שוב או פנה אלינו ישירות במייל.",
+    // Newsletter section
+    newsletterKicker: "ניוזלטר חודשי בחינם",
+    newsletterTitle: "רוצים להכיר את קהילת בוני שומרון מקרוב?",
+    newsletterText:
+      "אפשר להצטרף לניוזלטר חודשי וחינמי ולקבל סיפורים מהשטח, תמונות ועדכונים על פרויקטים וקהילות בשומרון.",
+    newsletterCta: "אני רוצה להצטרף לניוזלטר",
+    newsletterCheckbox: "אשמח להצטרף לניוזלטר החודשי והחינמי של בוני שומרון",
   },
   en: {
     dir: "ltr",
@@ -189,6 +197,7 @@ const data = {
       "Leave your details and we will follow up with the right partnership option - in Israel, in the U.S., or through a personal conversation.",
     formTitle: "Leave your details",
     formSubtitle: "We will follow up with details about joining SLB as a committed partner.",
+    formCta: "Submit details",
     extraContactLine: "Have additional suggestions? Feel free to contact Shmuel Berzon",
     extraContactPhone: "+972-52-598-8888",
     name: "Full name",
@@ -199,6 +208,13 @@ const data = {
     submitting: "Submitting...",
     success: "Thank you! Your details were submitted successfully. We will be in touch soon.",
     error: "Something went wrong. Please try again or contact us directly by email.",
+    // Newsletter section
+    newsletterKicker: "Free monthly newsletter",
+    newsletterTitle: "Want to get to know Shomron Legacy Builders more closely?",
+    newsletterText:
+      "You can join our free monthly newsletter and receive stories from the field, photos, and updates about projects and communities in the Shomron.",
+    newsletterCta: "Join the newsletter",
+    newsletterCheckbox: "I would like to join the free monthly Shomron Legacy Builders newsletter",
   },
 };
 
@@ -525,7 +541,7 @@ export default function LandingPage() {
   };
 
   const [language, setLanguage] = useState(getInitialLanguage);
-  const [formData, setFormData] = useState({ name: "", phone: "", email: "", city: "", country: "" });
+  const [formData, setFormData] = useState({ name: "", phone: "", email: "", city: "", country: "", newsletter: false });
   const [formStatus, setFormStatus] = useState("idle");
   const [showGoalCard, setShowGoalCard] = useState(false);
   const [openFaq, setOpenFaq] = useState(null);
@@ -578,7 +594,7 @@ export default function LandingPage() {
     formPayload.append("entry.37940007", formData.city);
     formPayload.append("entry.185221955", formData.country);
     formPayload.append("entry.399668613", language);
-    formPayload.append("entry.2092957137", "SLB Landing Page");
+    formPayload.append("entry.2092957137", formData.newsletter ? "SLB Landing Page - free updates requested" : "SLB Landing Page");
 
     await fetch(GOOGLE_FORM_ACTION_URL, {
       method: "POST",
@@ -592,6 +608,7 @@ export default function LandingPage() {
       email: "",
       city: "",
       country: "",
+      newsletter: false,
     });
 
     setFormStatus("success");
@@ -859,6 +876,19 @@ export default function LandingPage() {
         </div>
       </section>
 
+      <section className="bg-white px-6 py-16 md:px-10 md:py-18">
+        <div className="mx-auto max-w-4xl rounded-[2rem] border border-[#E4D8BC] bg-[#FBF8F1] p-7 text-center shadow-sm md:p-9">
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#4F6F45]">{t.newsletterKicker}</p>
+          <h2 className="mt-3 text-3xl font-bold tracking-tight text-[#0B1320] md:text-4xl">{t.newsletterTitle}</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-slate-600">{t.newsletterText}</p>
+          <div className="mt-6 flex justify-center">
+            <Button variant="green" href="#contact-form">
+              {t.newsletterCta}
+            </Button>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-[#FBF8F1] px-6 py-18 md:px-10 md:py-20">
         <div className="mx-auto max-w-7xl">
           <Heading kicker={t.faqKicker} title={t.faqTitle} />
@@ -923,10 +953,19 @@ export default function LandingPage() {
                 <TextInput label={t.city} value={formData.city} onChange={(value) => updateField("city", value)} required />
                 <TextInput label={t.country} value={formData.country} onChange={(value) => updateField("country", value)} required />
               </div>
+              <label className="flex cursor-pointer items-start gap-3 rounded-2xl bg-[#FBF8F1] p-4 text-sm font-semibold leading-6 text-slate-700 ring-1 ring-[#E9D9A8]">
+                <input
+                  type="checkbox"
+                  checked={formData.newsletter}
+                  onChange={(event) => updateField("newsletter", event.target.checked)}
+                  className="mt-1 h-4 w-4 rounded border-[#E4D8BC] accent-[#4F6F45]"
+                />
+                <span>{t.newsletterCheckbox}</span>
+              </label>
               {formStatus === "success" && <div className="rounded-2xl bg-[#F4EFE6] p-4 text-sm font-semibold text-[#344D32] ring-1 ring-[#E9D9A8]">{t.success}</div>}
               {formStatus === "error" && <div className="rounded-2xl bg-red-50 p-4 text-sm font-semibold text-red-700 ring-1 ring-red-100">{t.error}</div>}
               <Button type="submit" variant="green" disabled={formStatus === "submitting"}>
-                {formStatus === "submitting" ? t.submitting : t.primaryCta}
+                {formStatus === "submitting" ? t.submitting : t.formCta}
               </Button>
             </form>
             <div className="mt-6 border-t border-[#E4D8BC] pt-5 text-center text-sm leading-6 text-slate-600">

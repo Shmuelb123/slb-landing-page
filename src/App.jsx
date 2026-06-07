@@ -97,7 +97,7 @@ const data = {
     benefitsText:
       "המצטרפים מקבלים עדכונים, גישה, חוויות ותחושת שייכות לקהילה בינלאומית שבונה את השומרון לאורך זמן.",
     taxShortText:
-      "ההצטרפות מתבצעת דרך JGive וקרן שומרון, עם אפשרות לקבלת קבלה לפי סעיף 46 בישראל. לתורמים בארה\"ב ניתן יהיה להצטרף גם דרך מסלול 501(c)(3) לקבלת U.S. tax-deductible receipt, בכפוף לזכאות ולכללי המס.",
+      "ההצטרפות מתבצעת דרך JGive וקרן שומרון, עם אפשרות לקבלת קבלה לפי סעיף 46 בישראל. לתורמים בארה\"ב קיים גם מסלול תרומה עם אפשרות לקבלת U.S. tax-deductible receipt, בכפוף לזכאות ולכללי המס.",
     faqKicker: "שאלות נפוצות",
     faqTitle: "לפני שמצטרפים - כמה דברים שחשוב לדעת",
     finalKicker: "הצעד הבא",
@@ -134,6 +134,8 @@ const data = {
       "Join a community of people in Israel and around the world who feel connected to the Shomron and want to take part in real work on the ground - families, communities, security, and a future in Israel's biblical heartland.",
     primaryCta: "Join Shomron Legacy Builders",
     secondaryCta: "I want to hear more",
+    storyCta: "The Story of the Shomron",
+    backToLanding: "Back to main page",
     floatingGoalKicker: "First goal",
     floatingGoalTitle: "250 founding partners!",
     floatingGoalText: "Be among the first to join the community building the Shomron's future.",
@@ -471,6 +473,175 @@ const benefits = {
   ],
 };
 
+const storyChapters = {
+  he: [
+    {
+      era: "האבות",
+      title: "אברהם אבינו מגיע לשכם",
+      subtitle: "כאן מתחיל הקשר הראשון של האבות עם לב הארץ.",
+      text:
+        "אברהם אבינו נכנס לארץ ומגיע לאזור שכם ולאלון מורה. שם נשמעת ההבטחה: לזרעך אתן את הארץ הזאת. השומרון מופיע כבר בתחילת הדרך כמקום של אמונה, הבטחה ושייכות.",
+      visual: "אוהל, מזבח והר בלב הארץ",
+      image: "/images/story-shomron/image2.png",
+      Icon: BookOpen,
+    },
+    {
+      era: "יעקב אבינו",
+      title: "יעקב קונה חלקה בשכם",
+      subtitle: "לא רק מעבר בארץ - קניין, בית והמשכיות.",
+      text:
+        "יעקב אבינו חוזר לארץ, מגיע לשכם וקונה חלקת שדה. דורות אחר כך, עצמות יוסף נקברות באזור שכם. כך הופכת שכם לסמל של הבטחה, חזרה וקשר ממשי לאדמת השומרון.",
+      visual: "חלקת שדה, דרך עתיקה ושכם באופק",
+      image: "/images/story-shomron/image4.png",
+      Icon: Home,
+    },
+    {
+      era: "כניסה לארץ",
+      title: "חידוש הברית ומעמד הברכות והקללות",
+      subtitle: "בין הר גריזים להר עיבל, עם ישראל נכנס לארץ כעם של ברית ואחריות.",
+      text:
+        "לאחר שנות המדבר, עם ישראל נכנס לארץ ומחדש את הברית במרחב שכם. בין הר גריזים להר עיבל נשמעות הברכות והקללות, והכניסה לארץ מקבלת משמעות עמוקה יותר: הארץ אינה רק נחלה - היא דרך, נאמנות ושליחות.",
+      visual: "שני הרים, עם אחד וברית בלב השומרון",
+      image: "/images/story-shomron/image3.png",
+      Icon: HeartHandshake,
+    },
+    {
+      era: "ממלכת ישראל",
+      title: "שומרון - בירת ישראל",
+      subtitle: "מרכז של מלכות, דרכים, חקלאות וחיים עבריים.",
+      text:
+        "בימי ממלכת ישראל, העיר שומרון נעשית בירה ומרכז שלטוני חשוב. ההרים, הדרכים והעמקים של האזור מספרים על חיים, הנהגה, מסחר, חקלאות וזהות שנבנו כאן במשך דורות.",
+      visual: "עיר מלכותית על הר, כרמים ודרכים",
+      image: "/images/story-shomron/image6.png",
+      Icon: Building2,
+    },
+    {
+      era: "הגלות",
+      title: "כ-2000 שנות געגוע",
+      subtitle: "העם התרחק מהארץ, אבל הארץ לא יצאה מהלב.",
+      text:
+        "לאחר חורבן, גלות ופיזור, עם ישראל המשיך לזכור, להתפלל ולחלום על חזרה. השומרון נשאר חלק מהתנך, מהזיכרון ומהזהות - גם כאשר הדרך חזרה נראתה רחוקה מאוד.",
+      visual: "דרך ארוכה, ספר פתוח ואופק של הרים",
+      image: "/images/story-shomron/image5.png",
+      Icon: Route,
+    },
+    {
+      era: "החזרה בדורנו",
+      title: "מהפסוקים - לחיים חדשים",
+      subtitle: "משפחות, יישובים, מוסדות, ביטחון וקהילה.",
+      text:
+        "בדורות האחרונים עם ישראל חזר לארצו ולשומרון. מה שהיה פעם פסוקים, הרים ושרידים, הפך שוב לבתים, ילדים, בתי כנסת, מוסדות חינוך, חקלאות וחיים יהודיים בלב הארץ.",
+      visual: "בתי יישוב חדשים על רכסי השומרון",
+      image: "/images/story-shomron/image7.png",
+      Icon: ShieldCheck,
+    },
+    {
+      era: "2005",
+      title: "גירוש צפון השומרון",
+      subtitle: "שבר כואב בסיפור ההתיישבות.",
+      text:
+        "בשנת 2005 פונו גם יישובים בצפון השומרון במסגרת תוכנית ההתנתקות. חומש, שא-נור, גנים וכדים הפכו לסמל של כאב, אבל גם של אחריות, זיכרון ורצון לתקן.",
+      visual: "שער נעול, הר שקט ואור באופק",
+      image: "/images/story-shomron/image8.png",
+      Icon: FileCheck2,
+    },
+    {
+      era: "2026",
+      title: "הזדמנות היסטורית לתיקון ולבניין",
+      subtitle: "הסיפור לא נגמר בעבר. הוא נמשך עכשיו.",
+      text:
+        "בשנים הקרובות נפתחת הזדמנות לחזק את גוש ההתיישבות, לתקן את פצע ההתנתקות ולבנות קהילות חדשות וחזקות בשומרון. זו לא רק היסטוריה של פעם - זו הבחירה של הדור שלנו.",
+      visual: "זריחה מעל יישוב חדש ודרך פתוחה קדימה",
+      image: "/images/story-shomron/image10.png",
+      Icon: HandHeart,
+      featured: true,
+    },
+  ],
+  en: [
+    {
+      era: "The Patriarchs",
+      title: "Abraham reaches Shechem",
+      subtitle: "Here, the first connection of the forefathers to the heartland begins.",
+      text:
+        "Abraham enters the Land and reaches the area of Shechem and Elon Moreh. There, the promise is given: to your descendants I will give this land. The Shomron appears from the beginning as a place of faith, promise, and belonging.",
+      visual: "A tent, an altar, and a mountain in the heartland",
+      image: "/images/story-shomron/image2.png",
+      Icon: BookOpen,
+    },
+    {
+      era: "Jacob",
+      title: "Jacob buys a field in Shechem",
+      subtitle: "Not only passing through the land - ownership, home, and continuity.",
+      text:
+        "Jacob returns to the Land, arrives in Shechem, and buys a parcel of land. Generations later, Joseph's bones are buried in the area of Shechem. Shechem becomes a symbol of promise, return, and a real bond with the soil of the Shomron.",
+      visual: "A field, an ancient road, and Shechem in the distance",
+      image: "/images/story-shomron/image4.png",
+      Icon: Home,
+    },
+    {
+      era: "Entering the Land",
+      title: "Renewing the covenant - the blessings and the curses",
+      subtitle: "Between Mount Gerizim and Mount Ebal, Israel enters the Land as a people of covenant and responsibility.",
+      text:
+        "After the years in the desert, the people of Israel enter the Land and renew the covenant in the area of Shechem. Between Mount Gerizim and Mount Ebal, the blessings and curses are heard, and entering the Land receives deeper meaning: the Land is not only an inheritance - it is a path, a responsibility, and a mission.",
+      visual: "Two mountains, one people, and covenant in the heart of the Shomron",
+      image: "/images/story-shomron/image3.png",
+      Icon: HeartHandshake,
+    },
+    {
+      era: "Kingdom of Israel",
+      title: "Samaria - capital of Israel",
+      subtitle: "A center of kingdom, roads, agriculture, and Hebrew life.",
+      text:
+        "During the Kingdom of Israel, the city of Samaria became an important capital and administrative center. The hills, roads, and valleys of the region tell a story of life, leadership, commerce, agriculture, and identity built here over generations.",
+      visual: "A royal city on a hill, vineyards, and ancient roads",
+      image: "/images/story-shomron/image6.png",
+      Icon: Building2,
+    },
+    {
+      era: "Exile",
+      title: "Nearly 2,000 years of longing",
+      subtitle: "The people were far from the Land, but the Land never left the heart.",
+      text:
+        "After destruction, exile, and dispersion, the Jewish people continued to remember, pray, and dream of return. The Shomron remained part of the Bible, memory, and identity - even when the road back seemed very far away.",
+      visual: "A long road, an open book, and mountain horizons",
+      image: "/images/story-shomron/image5.png",
+      Icon: Route,
+    },
+    {
+      era: "Return in our generation",
+      title: "From verses to renewed life",
+      subtitle: "Families, communities, institutions, security, and daily life.",
+      text:
+        "In recent generations, the Jewish people returned to the Land and to the Shomron. What was once verses, mountains, and ancient remains became homes, children, synagogues, schools, agriculture, and Jewish life in the heartland.",
+      visual: "New homes on the ridges of the Shomron",
+      image: "/images/story-shomron/image7.png",
+      Icon: ShieldCheck,
+    },
+    {
+      era: "2005",
+      title: "The expulsion from northern Samaria",
+      subtitle: "A painful break in the story of settlement.",
+      text:
+        "In 2005, communities in northern Samaria were also evacuated as part of the disengagement plan. Homesh, Sa-Nur, Ganim, and Kadim became symbols of pain, but also of memory, responsibility, and the desire to repair.",
+      visual: "A locked gate, a quiet hill, and light on the horizon",
+      image: "/images/story-shomron/image8.png",
+      Icon: FileCheck2,
+    },
+    {
+      era: "2026",
+      title: "A historic opportunity to repair and build",
+      subtitle: "The story did not end in the past. It continues now.",
+      text:
+        "In the coming years, an opportunity is opening to strengthen the settlement bloc, repair the wound of the disengagement, and build strong new communities in the Shomron. This is not only ancient history - it is the choice of our generation.",
+      visual: "Sunrise over a new community and an open road ahead",
+      image: "/images/story-shomron/image10.png",
+      Icon: HandHeart,
+      featured: true,
+    },
+  ],
+};
+
 function Button({ children, href, variant = "primary", type = "button", disabled = false, onClick }) {
   const base = "inline-flex items-center justify-center rounded-2xl px-6 py-4 text-base font-semibold transition disabled:opacity-70";
   const styles = {
@@ -507,6 +678,7 @@ function Card({ children, className = "" }) {
   return <div className={`rounded-3xl border border-[#E4D8BC] bg-white shadow-sm shadow-slate-900/5 ${className}`}>{children}</div>;
 }
 
+
 function Heading({ kicker, title, text, light = false }) {
   return (
     <div className="mx-auto max-w-3xl text-center">
@@ -514,6 +686,105 @@ function Heading({ kicker, title, text, light = false }) {
       <h2 className={`mt-3 text-3xl font-bold tracking-tight md:text-5xl ${light ? "text-white" : "text-[#0B1320]"}`}>{title}</h2>
       {text && <p className={`mt-5 text-lg leading-8 ${light ? "text-slate-300" : "text-slate-600"}`}>{text}</p>}
     </div>
+  );
+}
+
+function StoryPage({ language, setLanguage, backToLanding }) {
+  const isHebrew = language === "he";
+  const t = data[language];
+  const chapters = storyChapters[language];
+  const DirectionArrow = isHebrew ? ArrowLeft : ArrowRight;
+
+  return (
+    <main dir={t.dir} className={`min-h-screen bg-[#FBF8F1] text-[#0B1320] ${isHebrew ? "text-right" : "text-left"}`}>
+      <section className="relative overflow-hidden bg-[#0B1320] px-6 py-20 text-white md:px-10 md:py-28">
+        <img src="/images/story-shomron/image1.png" alt="" className="absolute inset-0 h-full w-full object-cover opacity-75" />
+        <div className="absolute inset-0 bg-[#0B1320]/45" />
+        <div className="relative mx-auto max-w-7xl">
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <Button variant="outlineLight" onClick={backToLanding}>{t.backToLanding}</Button>
+            <Button variant="outlineLight" onClick={() => setLanguage(isHebrew ? "en" : "he")}>
+              <Languages className="h-4 w-4" />
+              <span className="mx-2">{t.switchLabel}</span>
+            </Button>
+          </div>
+          <div className="mt-16 max-w-4xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#E9D9A8]">{isHebrew ? "מסע בלב הארץ" : "A journey through the heartland"}</p>
+            <h1 className="mt-4 text-4xl font-black tracking-tight md:text-6xl">
+              {isHebrew ? "הסיפור של השומרון - מהתנך ועד היום" : "The Story of the Shomron - from the Bible to today"}
+            </h1>
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-200 md:text-xl">
+              {isHebrew
+                ? "השומרון הוא לא רק מקום על המפה. זה מרחב שבו נכתבו פרקים עמוקים בסיפור של עם ישראל - מהאבות, דרך הברית, המלכות, הגלות והחזרה, ועד ההזדמנות לבנות את הפרק הבא."
+                : "The Shomron is not only a place on the map. It is where deep chapters of the Jewish story were written - from the patriarchs, through covenant, kingdom, exile, return, and the opportunity to build the next chapter."}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 py-16 md:px-10 md:py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="relative space-y-8 before:absolute before:bottom-0 before:top-0 before:w-px before:bg-[#D8C9A8] before:content-[''] md:space-y-12 md:before:left-1/2 md:before:-translate-x-1/2">
+            {chapters.map((chapter, index) => {
+              const Icon = chapter.Icon;
+              const isEven = index % 2 === 0;
+
+              return (
+                <div key={chapter.title} className={`relative grid gap-6 md:grid-cols-2 md:items-center ${isEven ? "" : "md:[&>*:first-child]:col-start-2"}`}>
+                  <div className={`rounded-[2rem] border p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-xl ${chapter.featured ? "border-[#C8A24A] bg-[#0B1320] text-white" : "border-[#E4D8BC] bg-white text-[#0B1320]"}`}>
+                    <div className="flex items-center gap-3">
+                      <div className={`flex h-12 w-12 items-center justify-center rounded-2xl ${chapter.featured ? "bg-[#C8A24A] text-[#0B1320]" : "bg-[#E9D9A8]/70 text-[#344D32]"}`}>
+                        <Icon className="h-6 w-6" />
+                      </div>
+                      <p className={`text-sm font-bold uppercase tracking-[0.22em] ${chapter.featured ? "text-[#E9D9A8]" : "text-[#4F6F45]"}`}>{chapter.era}</p>
+                    </div>
+                    <h2 className="mt-5 text-2xl font-black md:text-3xl">{chapter.title}</h2>
+                    <p className={`mt-3 text-lg font-semibold ${chapter.featured ? "text-[#E9D9A8]" : "text-[#344D32]"}`}>{chapter.subtitle}</p>
+                    <p className={`mt-5 leading-8 ${chapter.featured ? "text-slate-200" : "text-slate-600"}`}>{chapter.text}</p>
+                  </div>
+
+                  <div className={`${isEven ? "md:pl-8" : "md:pr-8 md:row-start-1"}`}>
+                    <div className="group relative min-h-[19rem] overflow-hidden rounded-[2rem] border border-[#E4D8BC] bg-[#0B1320] shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+                      <img
+                        src={chapter.image}
+                        alt={chapter.visual}
+                        className="absolute inset-0 h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0B1320]/88 via-[#0B1320]/28 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-[#C8A24A]/20 via-transparent to-[#4F6F45]/20" />
+                      <div className="relative flex min-h-[19rem] items-end justify-end p-6 text-white">
+                        <p className="text-5xl font-black text-[#C8A24A] md:text-6xl">{String(index + 1).padStart(2, "0")}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#0B1320] px-6 py-16 text-white md:px-10 md:py-20">
+        <div className="mx-auto max-w-5xl text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#E9D9A8]">{isHebrew ? "הפרק הבא" : "The next chapter"}</p>
+          <h2 className="mt-4 text-3xl font-black md:text-5xl">
+            {isHebrew ? "הסיפור של השומרון נמשך - ואפשר להיות חלק ממנו" : "The story of the Shomron continues - and you can be part of it"}
+          </h2>
+          <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-200">
+            {isHebrew
+              ? "מה שהתחיל בפסוקים ובדרכים עתיקות ממשיך היום במשפחות, קהילות, יישובים וחיים שנבנים בשטח."
+              : "What began in verses and ancient roads continues today in families, communities, towns, and life being built on the ground."}
+          </p>
+          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+            <Button variant="primary" href={isHebrew ? ISRAEL_PAYMENT_URL_HE : ISRAEL_PAYMENT_URL_EN}>
+              {t.primaryCta}
+              <DirectionArrow className="mx-2 h-5 w-5" />
+            </Button>
+            <Button variant="outlineLight" onClick={backToLanding}>{t.backToLanding}</Button>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
 
@@ -546,6 +817,12 @@ export default function LandingPage() {
   const [showGoalCard, setShowGoalCard] = useState(false);
   const [openFaq, setOpenFaq] = useState(null);
   const [selectedConnection, setSelectedConnection] = useState(null);
+  const [page, setPage] = useState(() => {
+    if (typeof window === "undefined") return "home";
+
+    const params = new URLSearchParams(window.location.search);
+    return params.get("page") === "story" ? "story" : "home";
+  });
 
   const t = data[language];
   const isHebrew = language === "he";
@@ -561,6 +838,20 @@ export default function LandingPage() {
     const url = new URL(window.location.href);
     url.searchParams.set("lang", nextLanguage);
     window.history.replaceState({}, "", url.toString());
+  };
+
+  const changePage = (nextPage) => {
+    setPage(nextPage);
+
+    const url = new URL(window.location.href);
+    if (nextPage === "story") {
+      url.searchParams.set("page", "story");
+    } else {
+      url.searchParams.delete("page");
+    }
+    url.searchParams.set("lang", language);
+    window.history.replaceState({}, "", url.toString());
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   useEffect(() => {
@@ -617,6 +908,10 @@ export default function LandingPage() {
   }
 };
 
+  if (page === "story") {
+    return <StoryPage language={language} setLanguage={changeLanguage} backToLanding={() => changePage("home")} />;
+  }
+
   return (
     <main dir={t.dir} className={`min-h-screen bg-[#FBF8F1] text-[#0B1320] ${textAlign}`}>
       <section className="relative overflow-hidden bg-[#0B1320] text-white">
@@ -659,6 +954,7 @@ export default function LandingPage() {
                 {t.primaryCta}
                 <DirectionArrow className="mx-2 h-5 w-5" />
               </Button>
+              <Button variant="outlineLight" onClick={() => changePage("story")}>{t.storyCta}</Button>
               <Button variant="outlineLight" href="#contact-form">{t.secondaryCta}</Button>
             </div>
           </motion.div>
